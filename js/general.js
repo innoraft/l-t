@@ -76,8 +76,8 @@
 		
 		/* MatchHeight Js
 		-------------------------------------------------------------------------*/
-		if($('.communication-section .col-summary').length){
-			$('.communication-section .col-summary').matchHeight();
+		if($('.communication-section .col-container').length){
+			$('.communication-section .col-container').matchHeight();
 		}
 
 	});

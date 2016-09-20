@@ -7,7 +7,6 @@
     font-family: 'ProximaLight';
     src: url('../fonts/proximanova-light-webfont.eot');
     src: url('../fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/proximanova-light-webfont.woff2') format('woff2'),
          url('../fonts/proximanova-light-webfont.woff') format('woff'),
          url('../fonts/proximanova-light-webfont.ttf') format('truetype'),
          url('../fonts/proximanova-light-webfont.svg#ProximaLight') format('svg');
@@ -20,10 +19,20 @@
     font-family: 'ProximaRegular';
     src: url('../fonts/proximanova-regular-webfont.eot');
     src: url('../fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/proximanova-regular-webfont.woff2') format('woff2'),
          url('../fonts/proximanova-regular-webfont.woff') format('woff'),
          url('../fonts/proximanova-regular-webfont.ttf') format('truetype'),
          url('../fonts/proximanova-regular-webfont.svg#ProximaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaBold';
+    src: url('../fonts/proximanova-semibold-webfont.eot');
+    src: url('../fonts/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-semibold-webfont.woff') format('woff'),
+         url('../fonts/proximanova-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/proximanova-semibold-webfont.svg#ProximaBold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -82,10 +91,13 @@ input[type="button"]:hover, input[type="submit"]:hover, button:hover { backgroun
 input[type="checkbox"], input[type="radio"] { margin:4px 8px 0 ; vertical-align:top;  }
 
 
-/* =Layout Width
-========================================================================================*/
+// ---------------------------------Layout Width-----------------------------------
 .container { width:1200px; }
+.box-table { display:table; height:100%; width:100%; }
+.box-info { display:table-cell; vertical-align:middle; }
 
+
+// ---------------------------------Header-----------------------------------
 #header {
 	#logo  { 
 		width:356px; margin:0 auto; display:block; padding:20px; 
@@ -93,23 +105,113 @@ input[type="checkbox"], input[type="radio"] { margin:4px 8px 0 ; vertical-align:
 	}	
 }
 
+#mainmenu { 
+	background:$blue-light; @include box-shadow(3px 6px
+	6 10px rgba(32, 32, 34, 0.25));
+	ul { 
+		@extend %no-style; text-align:center; font-size:0; 
+		li { display:inline-block; line-height:50px; padding:0 18px; }
+		a { 
+			 font-family:$font-family-regular; position:relative; color:$white; text-transform:uppercase; font-size:16px; display:block;
+			&:after { content:""; width:100%; height:2px; background:$white; position:absolute; left:0; bottom:10px; opacity:0; }
+			&:hover:after { opacity:1; } 
+		}
+		a:hover { text-decoration:none; }
+	}
+}
+
+#mainbanner { 
+	height:652px; background:url(../images/banner-bg.jpg) 50% 50% no-repeat;  @extend %background-full; color:$white; 
+	.container { height:100%; }
+	.box-table {
+		width:900px; margin:0 auto; text-align:center; 
+		.box-info {
+			> a { font-size:28px; font-family:$font-family-bold; text-transform:uppercase; color:$white; }	
+		}
+	}
+	h3 { 
+		font-size:38px; @include text-shadow(0px 3px 10px rgba(32, 32, 34, 0.25)); text-transform:uppercase; padding:0 90px; margin:0 0 25px; position:relative;
+		span { display:block; }
+		strong { font-family:$font-family-bold; font-weight:normal; }
+		&:before { content:""; position:absolute; left:0; top:0; @include sprites(87,92,-110,-100); top:-50px; }
+		&:after { content:""; position:absolute; right:0; @include sprites(87,92,-204,-100); bottom:-50px; }
+	}
+	
+	.btn-group { 
+		display:block; margin:68px 0 0 -60px;
+		a { font-size:18px; color:#fff; display:inline-block; margin:0 0 0 60px; }
+		a:before { content:""; width:94px; height:96px; margin:0 auto 20px; display:block; }
+		.curious-icon { &:before { @include sprites(94,96,-8,-4); } }
+		.find-icon { &:before { @include sprites(94,96,-110,-4); }}
+		.something-icon { &:before { @include sprites(94,96,-8,-106); } }
+	}
+}
+
+.readmore {
+	font-size:25px; margin:0 auto; display:block; width:100px; color:$white; text-transform:uppercase;
+}
+
+
+// ---------------------------------Main Section-----------------------------------
 .section { 
 	padding:30px 0; 
 	h3 { text-align:center; margin:0; text-transform:uppercase; font-size:$font-size-h3; margin:0 0 40px; }	
 }
 
+
 .communication-section {
 	background:url(../images/communication-bg.jpg) 0 0 no-repeat; @extend %background-full; color:$white;
 	.col-sm-4 { margin:0 0 30px; }
 	.col-container { 
-		background:rgba(75,88,111,.5); padding:40px; 
-		h4 { font-size:30px; margin:0; }
+		background:rgba(75,88,111,.5);  
+		h4 { 
+			font-size:26px; margin:0; letter-spacing:-0.055em;
+			span { display:block; }
+		}
+		.icon { width:90px; height:90px; border:1px solid $blue; display:block; position:absolute; left:40px; top:50%; margin-top:-45px; text-indent:-999em; }
+		.col-summary { height:100%; padding:40px 40px 40px 138px; }
 	}
+	
 }	
 
 .contact-section {
-	color:$white; background:url(../images/contact-mktg-bg.jpg) 0 0 no-repeat $dark-blue; @extend %background-full;  
+	color:$white; background:url(../images/contact-mktg-bg.jpg) 0 0 no-repeat $dark-blue; @extend %background-full; @include box-shadow(-3px -6px 10px rgba(32, 32, 34, 0.25));
 	h4 { font-size:$font-size-h3; margin:0; text-transform:uppercase; text-align:center; }
+	svg { margin:0 auto 40px; display:block; width:154px; height:178px; }
+	.path { stroke-dashoffset:1940; stroke:rgb(255,255,255); 
+		stroke-width:0.25;
+		stroke-dasharray:1940;
+		animation:draw 10s linear infinite;
+		-webkit-animation:draw 10s linear infinite;
+		-moz-animation:draw 10s linear infinite;
+	}
+	
+	.path.fillpath {
+		stroke:rgb(255,255,255); 
+		stroke-width:0.25;
+	}
+	
+	
+	@-webkit-keyframes draw {
+		50% { stroke-dashoffset:0; }
+	}
+	@-moz-keyframes draw {
+		50% { stroke-dashoffset:0; }
+	}
+	@keyframes draw {
+		50% { stroke-dashoffset:0; }
+	}
+	
+	@-webkit-keyframes fillpath {
+		50% { fill-opacity:0; }
+	}
+	@-moz-keyframes fillpath {
+		50% { fill-opacity:0; }
+	}
+	@keyframes fillpath {
+		50% { fill-opacity:0; }
+	}
+
 }
 
 
@@ -123,3 +225,5 @@ input[type="checkbox"], input[type="radio"] { margin:4px 8px 0 ; vertical-align:
 		}
 	}
 }
+
+

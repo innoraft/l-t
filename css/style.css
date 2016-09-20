@@ -1,5 +1,12 @@
-/* line 70, ../sass/_variables.scss */
-.communication-section, .contact-section {
+/* line 60, ../sass/_variables.scss */
+#mainmenu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 74, ../sass/_variables.scss */
+#mainbanner, .communication-section, .contact-section {
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -11,20 +18,27 @@
 @font-face {
   font-family: 'ProximaLight';
   src: url("../fonts/proximanova-light-webfont.eot");
-  src: url("../fonts/proximanova-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-light-webfont.woff2") format("woff2"), url("../fonts/proximanova-light-webfont.woff") format("woff"), url("../fonts/proximanova-light-webfont.ttf") format("truetype"), url("../fonts/proximanova-light-webfont.svg#ProximaLight") format("svg");
+  src: url("../fonts/proximanova-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-light-webfont.woff") format("woff"), url("../fonts/proximanova-light-webfont.ttf") format("truetype"), url("../fonts/proximanova-light-webfont.svg#ProximaLight") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'ProximaRegular';
   src: url("../fonts/proximanova-regular-webfont.eot");
-  src: url("../fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-regular-webfont.woff2") format("woff2"), url("../fonts/proximanova-regular-webfont.woff") format("woff"), url("../fonts/proximanova-regular-webfont.ttf") format("truetype"), url("../fonts/proximanova-regular-webfont.svg#ProximaRegular") format("svg");
+  src: url("../fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-regular-webfont.woff") format("woff"), url("../fonts/proximanova-regular-webfont.ttf") format("truetype"), url("../fonts/proximanova-regular-webfont.svg#ProximaRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaBold';
+  src: url("../fonts/proximanova-semibold-webfont.eot");
+  src: url("../fonts/proximanova-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-semibold-webfont.woff") format("woff"), url("../fonts/proximanova-semibold-webfont.ttf") format("truetype"), url("../fonts/proximanova-semibold-webfont.svg#ProximaBold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 /* =Box Sizing 
 ========================================================================================*/
-/* line 35, ../sass/style.scss */
+/* line 44, ../sass/style.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -33,7 +47,7 @@
   box-sizing: border-box;
 }
 
-/* line 36, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -42,7 +56,7 @@
   box-sizing: border-box;
 }
 
-/* line 37, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="search"], textarea, select, input[type="button"], input[type="submit"], button {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -51,52 +65,52 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
   box-sizing: border-box;
 }
 
-/* line 39, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 .cf:before, .cf:after {
   content: "";
   display: table;
 }
 
-/* line 40, ../sass/style.scss */
+/* line 49, ../sass/style.scss */
 .cf:after {
   clear: both;
 }
 
-/* line 41, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 .cf {
   zoom: 1;
 }
 
-/* line 43, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 body {
   font-family: "ProximaLight", Arial, Helvetica, sans-serif;
   font-size: 16px;
-  color: #1c2c42;
+  color: #2b2b2b;
 }
 
-/* line 45, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 img {
   vertical-align: top;
   border: 0;
 }
 
-/* line 46, ../sass/style.scss */
+/* line 55, ../sass/style.scss */
 a {
   outline: none;
 }
 
-/* line 47, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 a:focus {
   outline: none;
   text-decoration: none;
 }
 
-/* line 48, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 :focus {
   outline: none;
 }
 
-/* line 50, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 .cols {
   *zoom: 1;
   margin-left: -20px;
@@ -104,14 +118,14 @@ a:focus {
   clear: both;
 }
 
-/* line 51, ../sass/style.scss */
+/* line 60, ../sass/style.scss */
 .cols:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 52, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 .cols .col {
   float: left;
   min-height: 1px;
@@ -119,34 +133,34 @@ a:focus {
   padding-right: 20px;
 }
 
-/* line 53, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 .cols1 .col {
   width: 100%;
 }
 
-/* line 54, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
 .cols2 .col {
   width: 50%;
 }
 
-/* line 55, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 .cols3 .col {
   width: 33.333333333333%;
 }
 
-/* line 56, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 .cols4 .col {
   width: 25%;
 }
 
-/* line 57, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .cols5 .col {
   width: 20%;
 }
 
 /* =Form Style
 ========================================================================================*/
-/* line 61, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 button, input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="search"], input[type="url"], textarea, select, input[type="submit"], input[type="button"] {
   font-size: 100%;
   margin: 0;
@@ -154,19 +168,19 @@ button, input[type="text"], input[type="password"], input[type="email"], input[t
   *vertical-align: middle;
 }
 
-/* line 62, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 button, input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="search"], input[type="url"], textarea, input[type="submit"], input[type="button"] {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   border-radius: 0;
 }
 
-/* line 63, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 button, input {
   line-height: normal;
 }
 
-/* line 64, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="search"], input[type="url"], textarea, select {
   background: #fff;
   padding: 4px 12px;
@@ -183,17 +197,17 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
   border-radius: 0;
 }
 
-/* line 65, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 input[type="text"].input-lg, input[type="password"].input-lg, input[type="email"].input-lg, input[type="tel"].input-lg, input[type="search"].input-lg, input[type="url"].input-lg {
   height: 58px;
 }
 
-/* line 66, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 input[type="text"].input-sm, input[type="password"].input-sm, input[type="email"].input-sm, input[type="tel"].input-sm, input[type="search"].input-sm, input[type="url"].input-sm {
   height: 38px;
 }
 
-/* line 67, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
 textarea {
   width: 100%;
   height: 160px;
@@ -203,7 +217,7 @@ textarea {
   font-family: 'karbon-regular', Helvetica, sans-serif;
 }
 
-/* line 68, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 select {
   height: auto;
   padding: 12px 42px 12px 12px;
@@ -220,12 +234,12 @@ select {
   font-size: 16px;
 }
 
-/* line 69, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 select::-ms-expand {
   display: none;
 }
 
-/* line 70, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 .custom-select {
   display: block;
   margin: 0;
@@ -233,7 +247,7 @@ select::-ms-expand {
   background: #fff;
 }
 
-/* line 71, ../sass/style.scss */
+/* line 80, ../sass/style.scss */
 .custom-select:before {
   content: '';
   position: absolute;
@@ -244,7 +258,7 @@ select::-ms-expand {
   top: 0;
 }
 
-/* line 72, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 .custom-select:after {
   content: '';
   background: url(../images/bgi/sprites.svg) no-repeat -105px 0;
@@ -256,39 +270,39 @@ select::-ms-expand {
   margin-top: -8px;
 }
 
-/* line 73, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 .ie select {
   padding-right: 0;
 }
 
-/* line 74, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 .ie .custom-select:before {
   z-index: 2;
   height: 40px;
 }
 
-/* line 75, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 .ie .custom-select:after {
   z-index: 3;
 }
 
-/* line 76, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 .ie input[type="text"], .ie input[type="password"], .ie input[type="email"], .ie input[type="tel"], .ie input[type="search"], .ie input[type="url"], .ie select {
   line-height: 32px;
 }
 
-/* line 78, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="search"]:focus, input[type="url"]:focus, textarea:focus, select:focus {
   border: solid 1px #acacac;
 }
 
-/* line 79, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 input::-moz-focus-inner, button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 80, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 input[type="button"], input[type="submit"], button {
   border: 0;
   cursor: pointer;
@@ -306,43 +320,222 @@ input[type="button"], input[type="submit"], button {
   margin: 0 5px 0 0;
 }
 
-/* line 81, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 input[type="button"]:hover, input[type="submit"]:hover, button:hover {
   background: #033a6c;
   color: #fff;
 }
 
-/* line 82, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 input[type="checkbox"], input[type="radio"] {
   margin: 4px 8px 0;
   vertical-align: top;
 }
 
-/* =Layout Width
-========================================================================================*/
-/* line 87, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 .container {
   width: 1200px;
 }
 
-/* line 90, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
+.box-table {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 97, ../sass/style.scss */
+.box-info {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 102, ../sass/style.scss */
 #header #logo {
   width: 356px;
   margin: 0 auto;
   display: block;
   padding: 20px;
 }
-/* line 92, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 #header #logo img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 96, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
+#mainmenu {
+  background: #0756cf;
+  -moz-box-shadow: 3px 6px 6 10px rgba(32, 32, 34, 0.25);
+  -webkit-box-shadow: 3px 6px 6 10px rgba(32, 32, 34, 0.25);
+  box-shadow: 3px 6px 6 10px rgba(32, 32, 34, 0.25);
+}
+/* line 111, ../sass/style.scss */
+#mainmenu ul {
+  text-align: center;
+  font-size: 0;
+}
+/* line 113, ../sass/style.scss */
+#mainmenu ul li {
+  display: inline-block;
+  line-height: 50px;
+  padding: 0 18px;
+}
+/* line 114, ../sass/style.scss */
+#mainmenu ul a {
+  font-family: "ProximaRegular", Arial, Helvetica, sans-serif;
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  display: block;
+}
+/* line 116, ../sass/style.scss */
+#mainmenu ul a:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  opacity: 0;
+}
+/* line 117, ../sass/style.scss */
+#mainmenu ul a:hover:after {
+  opacity: 1;
+}
+/* line 119, ../sass/style.scss */
+#mainmenu ul a:hover {
+  text-decoration: none;
+}
+
+/* line 123, ../sass/style.scss */
+#mainbanner {
+  height: 652px;
+  background: url(../images/banner-bg.jpg) 50% 50% no-repeat;
+  color: #fff;
+}
+/* line 125, ../sass/style.scss */
+#mainbanner .container {
+  height: 100%;
+}
+/* line 126, ../sass/style.scss */
+#mainbanner .box-table {
+  width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 129, ../sass/style.scss */
+#mainbanner .box-table .box-info > a {
+  font-size: 28px;
+  font-family: "ProximaBold", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* line 132, ../sass/style.scss */
+#mainbanner h3 {
+  font-size: 38px;
+  text-shadow: 0px 3px 10px rgba(32, 32, 34, 0.25);
+  text-transform: uppercase;
+  padding: 0 90px;
+  margin: 0 0 25px;
+  position: relative;
+}
+/* line 134, ../sass/style.scss */
+#mainbanner h3 span {
+  display: block;
+}
+/* line 135, ../sass/style.scss */
+#mainbanner h3 strong {
+  font-family: "ProximaBold", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+/* line 136, ../sass/style.scss */
+#mainbanner h3:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 87px;
+  height: 92px;
+  background: url(../images/bgi/sprites.svg);
+  background-repeat: no-repeat;
+  background-position: -110px -100px;
+  top: -50px;
+}
+/* line 137, ../sass/style.scss */
+#mainbanner h3:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 87px;
+  height: 92px;
+  background: url(../images/bgi/sprites.svg);
+  background-repeat: no-repeat;
+  background-position: -204px -100px;
+  bottom: -50px;
+}
+/* line 140, ../sass/style.scss */
+#mainbanner .btn-group {
+  display: block;
+  margin: 68px 0 0 -60px;
+}
+/* line 142, ../sass/style.scss */
+#mainbanner .btn-group a {
+  font-size: 18px;
+  color: #fff;
+  display: inline-block;
+  margin: 0 0 0 60px;
+}
+/* line 143, ../sass/style.scss */
+#mainbanner .btn-group a:before {
+  content: "";
+  width: 94px;
+  height: 96px;
+  margin: 0 auto 20px;
+  display: block;
+}
+/* line 144, ../sass/style.scss */
+#mainbanner .btn-group .curious-icon:before {
+  width: 94px;
+  height: 96px;
+  background: url(../images/bgi/sprites.svg);
+  background-repeat: no-repeat;
+  background-position: -8px -4px;
+}
+/* line 145, ../sass/style.scss */
+#mainbanner .btn-group .find-icon:before {
+  width: 94px;
+  height: 96px;
+  background: url(../images/bgi/sprites.svg);
+  background-repeat: no-repeat;
+  background-position: -110px -4px;
+}
+/* line 146, ../sass/style.scss */
+#mainbanner .btn-group .something-icon:before {
+  width: 94px;
+  height: 96px;
+  background: url(../images/bgi/sprites.svg);
+  background-repeat: no-repeat;
+  background-position: -8px -106px;
+}
+
+/* line 150, ../sass/style.scss */
+.readmore {
+  font-size: 25px;
+  margin: 0 auto;
+  display: block;
+  width: 100px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* line 156, ../sass/style.scss */
 .section {
   padding: 30px 0;
 }
-/* line 98, ../sass/style.scss */
+/* line 158, ../sass/style.scss */
 .section h3 {
   text-align: center;
   margin: 0;
@@ -351,50 +544,125 @@ input[type="checkbox"], input[type="radio"] {
   margin: 0 0 40px;
 }
 
-/* line 101, ../sass/style.scss */
+/* line 162, ../sass/style.scss */
 .communication-section {
   background: url(../images/communication-bg.jpg) 0 0 no-repeat;
   color: #fff;
 }
-/* line 103, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 .communication-section .col-sm-4 {
   margin: 0 0 30px;
 }
-/* line 104, ../sass/style.scss */
+/* line 165, ../sass/style.scss */
 .communication-section .col-container {
   background: rgba(75, 88, 111, 0.5);
-  padding: 40px;
 }
-/* line 106, ../sass/style.scss */
+/* line 167, ../sass/style.scss */
 .communication-section .col-container h4 {
-  font-size: 30px;
+  font-size: 26px;
   margin: 0;
+  letter-spacing: -0.055em;
+}
+/* line 169, ../sass/style.scss */
+.communication-section .col-container h4 span {
+  display: block;
+}
+/* line 171, ../sass/style.scss */
+.communication-section .col-container .icon {
+  width: 90px;
+  height: 90px;
+  border: 1px solid #1a90f5;
+  display: block;
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  margin-top: -45px;
+  text-indent: -999em;
+}
+/* line 172, ../sass/style.scss */
+.communication-section .col-container .col-summary {
+  height: 100%;
+  padding: 40px 40px 40px 138px;
 }
 
-/* line 110, ../sass/style.scss */
+/* line 177, ../sass/style.scss */
 .contact-section {
   color: #fff;
   background: url(../images/contact-mktg-bg.jpg) 0 0 no-repeat #1559bc;
+  -moz-box-shadow: -3px -6px 10px rgba(32, 32, 34, 0.25);
+  -webkit-box-shadow: -3px -6px 10px rgba(32, 32, 34, 0.25);
+  box-shadow: -3px -6px 10px rgba(32, 32, 34, 0.25);
 }
-/* line 112, ../sass/style.scss */
+/* line 179, ../sass/style.scss */
 .contact-section h4 {
   font-size: 30px;
   margin: 0;
   text-transform: uppercase;
   text-align: center;
 }
-
-/* line 117, ../sass/style.scss */
+/* line 180, ../sass/style.scss */
+.contact-section svg {
+  margin: 0 auto 40px;
+  display: block;
+  width: 154px;
+  height: 178px;
+}
+/* line 181, ../sass/style.scss */
+.contact-section .path {
+  stroke-dashoffset: 1940;
+  stroke: white;
+  stroke-width: 0.25;
+  stroke-dasharray: 1940;
+  animation: draw 10s linear infinite;
+  -webkit-animation: draw 10s linear infinite;
+  -moz-animation: draw 10s linear infinite;
+}
+/* line 189, ../sass/style.scss */
+.contact-section .path.fillpath {
+  stroke: white;
+  stroke-width: 0.25;
+}
+@-webkit-keyframes draw {
+  50% {
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes draw {
+  50% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes draw {
+  50% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes fillpath {
+  50% {
+    fill-opacity: 0;
+  }
+}
+@-moz-keyframes fillpath {
+  50% {
+    fill-opacity: 0;
+  }
+}
+@keyframes fillpath {
+  50% {
+    fill-opacity: 0;
+  }
+}
+/* line 219, ../sass/style.scss */
 #footer {
   background: #201b18;
   padding: 15px 0;
   color: #fff;
 }
-/* line 120, ../sass/style.scss */
+/* line 222, ../sass/style.scss */
 #footer .row a {
   color: #fff;
 }
-/* line 122, ../sass/style.scss */
+/* line 224, ../sass/style.scss */
 #footer .row .text-right p {
   margin: 0;
   text-transform: uppercase;

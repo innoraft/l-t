@@ -51,7 +51,14 @@
 			if (screencheck(767)) {
 			}
 			
-			}).resize();
+			if($('.journey-section .strip').length){
+				$this = $('.strip');
+				$height = $this.parents('.journey-section').height();
+				$borderHeight = parseInt($winW()/1.6);
+				$('.journey-section .strip').css('border-top-width',$winW()*1.6);
+				$('.journey-section .strip').css('border-right-width', $borderHeight);
+			}
+		}).resize();
 
 
 		/* This adds placeholder support to browsers that wouldn't otherwise support it.
@@ -78,6 +85,45 @@
 		-------------------------------------------------------------------------*/
 		if($('.communication-section .col-container').length){
 			$('.communication-section .col-container').matchHeight();
+		}
+		
+		if($('.carousel-section .box-summary').length){
+			$('.carousel-section .box-summary').matchHeight();
+		}
+		
+		
+		if($('.carousel-section').length){
+			$('.carousel-section').slick({
+			  slidesToShow:3,
+			  slidesToScroll:1,
+			  autoplay:true,
+			  arrows:true,
+			  dots:false,
+			  autoplaySpeed:5000,
+			  responsive: [
+				{
+				  breakpoint: 1024,
+				  settings: {
+					slidesToShow: 3,
+					slidesToScroll:1,
+				  }
+				},
+				{
+				  breakpoint: 768,
+				  settings: {
+					slidesToShow: 2,
+					slidesToScroll:1
+				  }
+				},
+				{
+				  breakpoint: 480,
+				  settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				  }
+				}
+				]
+			});
 		}
 
 	});

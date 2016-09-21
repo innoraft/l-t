@@ -1,12 +1,18 @@
-/* line 60, ../sass/_variables.scss */
+/* line 22, ../sass/_variables.scss */
+p {
+  margin: 0 0 25px;
+  line-height: 1.35;
+}
+
+/* line 65, ../sass/_variables.scss */
 #mainmenu ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 74, ../sass/_variables.scss */
-#mainbanner, .communication-section, .contact-section {
+/* line 79, ../sass/_variables.scss */
+#mainbanner, .who-we-are-section, .employer-section, .imagineering-section, .communication-section, .contact-section {
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -84,8 +90,8 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
 /* line 52, ../sass/style.scss */
 body {
   font-family: "ProximaLight", Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  color: #2b2b2b;
+  font-size: 25px;
+  color: #0f1521;
 }
 
 /* line 54, ../sass/style.scss */
@@ -413,7 +419,9 @@ input[type="checkbox"], input[type="radio"] {
 /* line 123, ../sass/style.scss */
 #mainbanner {
   height: 652px;
-  background: url(../images/banner-bg.jpg) 50% 50% no-repeat;
+  background-image: url(../images/banner-bg.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   color: #fff;
 }
 /* line 125, ../sass/style.scss */
@@ -530,44 +538,203 @@ input[type="checkbox"], input[type="radio"] {
   color: #fff;
   text-transform: uppercase;
 }
-
-/* line 156, ../sass/style.scss */
-.section {
-  padding: 30px 0;
+/* line 152, ../sass/style.scss */
+.readmore.dark {
+  color: #0f1521;
 }
-/* line 158, ../sass/style.scss */
+
+/* line 157, ../sass/style.scss */
+.section {
+  padding: 100px 0;
+}
+/* line 159, ../sass/style.scss */
 .section h3 {
   text-align: center;
   margin: 0;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 38px;
   margin: 0 0 40px;
 }
+/* line 160, ../sass/style.scss */
+.section.xs-section {
+  padding: 42px 0;
+}
 
-/* line 162, ../sass/style.scss */
-.communication-section {
-  background: url(../images/communication-bg.jpg) 0 0 no-repeat;
+/* line 163, ../sass/style.scss */
+.journey-section {
+  background: #383f47;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+/* line 165, ../sass/style.scss */
+.journey-section .strip {
+  border-top: 10px solid #444a52;
+  border-right: 10px solid transparent;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* line 166, ../sass/style.scss */
+.journey-section .container {
+  position: relative;
+  z-index: 10;
+}
+/* line 168, ../sass/style.scss */
+.journey-section .container h3 {
+  margin: 0 0 100px;
+}
+/* line 169, ../sass/style.scss */
+.journey-section .container blockquote {
+  font-size: 42px;
+  border: 0;
+  padding: 0 50px;
+  line-height: 1.25;
+  text-align: center;
+}
+/* line 172, ../sass/style.scss */
+.journey-section .container .right-container .col-container {
+  padding-left: 70px;
+}
+/* line 173, ../sass/style.scss */
+.journey-section .container .right-container p {
+  margin: 30px 0 0;
+}
+/* line 175, ../sass/style.scss */
+.journey-section .container .right-container p:first-child {
+  margin: 0;
+  font-size: 32px;
+}
+
+/* line 183, ../sass/style.scss */
+.video-section .left-container .col-container {
+  padding-right: 50px;
+}
+/* line 185, ../sass/style.scss */
+.video-section .left-container .col-container h3 {
+  text-align: left;
+}
+
+/* line 190, ../sass/style.scss */
+.who-we-are-section {
+  background-image: url(../images/who-we-are-bg.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   color: #fff;
 }
-/* line 164, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
+.who-we-are-section p {
+  margin: 30px 0 0;
+}
+/* line 195, ../sass/style.scss */
+.who-we-are-section h3 + p {
+  margin: 0;
+}
+
+/* line 198, ../sass/style.scss */
+.employer-section {
+  background-image: url(../images/employer-bg.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+/* line 200, ../sass/style.scss */
+.employer-section h3 {
+  text-align: left;
+}
+/* line 201, ../sass/style.scss */
+.employer-section p {
+  margin: 30px 0 0;
+}
+/* line 203, ../sass/style.scss */
+.employer-section p:first-child {
+  margin: 0;
+}
+/* line 205, ../sass/style.scss */
+.employer-section .container-row {
+  width: 53.5%;
+}
+
+/* line 209, ../sass/style.scss */
+.mission-section h3 {
+  text-align: right;
+}
+/* line 210, ../sass/style.scss */
+.mission-section .container-row {
+  width: 55.83333333333333%;
+  text-align: right;
+}
+/* line 211, ../sass/style.scss */
+.mission-section .readmore {
+  display: inline-block;
+  margin: 0;
+}
+
+/* line 214, ../sass/style.scss */
+.imagineering-section {
+  background-image: url(../images/imagineering-section.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+/* line 216, ../sass/style.scss */
+.imagineering-section .col-container {
+  background: #1759c9;
+  padding: 24px;
+}
+/* line 217, ../sass/style.scss */
+.imagineering-section .box-summary {
+  margin: 30px 0 0;
+}
+/* line 218, ../sass/style.scss */
+.imagineering-section h4 {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+}
+/* line 220, ../sass/style.scss */
+.imagineering-section h4 a {
+  color: #fff;
+}
+/* line 222, ../sass/style.scss */
+.imagineering-section .item {
+  margin: 0 15px;
+}
+/* line 223, ../sass/style.scss */
+.imagineering-section .carousel-section .slick-slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 227, ../sass/style.scss */
+.communication-section {
+  background-image: url(../images/communication-bg.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+/* line 229, ../sass/style.scss */
 .communication-section .col-sm-4 {
   margin: 0 0 30px;
 }
-/* line 165, ../sass/style.scss */
+/* line 230, ../sass/style.scss */
 .communication-section .col-container {
   background: rgba(75, 88, 111, 0.5);
 }
-/* line 167, ../sass/style.scss */
+/* line 232, ../sass/style.scss */
 .communication-section .col-container h4 {
   font-size: 26px;
   margin: 0;
   letter-spacing: -0.055em;
 }
-/* line 169, ../sass/style.scss */
+/* line 234, ../sass/style.scss */
 .communication-section .col-container h4 span {
   display: block;
 }
-/* line 171, ../sass/style.scss */
+/* line 236, ../sass/style.scss */
 .communication-section .col-container .icon {
   width: 90px;
   height: 90px;
@@ -579,35 +746,42 @@ input[type="checkbox"], input[type="radio"] {
   margin-top: -45px;
   text-indent: -999em;
 }
-/* line 172, ../sass/style.scss */
+/* line 237, ../sass/style.scss */
 .communication-section .col-container .col-summary {
   height: 100%;
   padding: 40px 40px 40px 138px;
 }
 
-/* line 177, ../sass/style.scss */
+/* line 243, ../sass/style.scss */
 .contact-section {
   color: #fff;
-  background: url(../images/contact-mktg-bg.jpg) 0 0 no-repeat #1559bc;
+  background-image: url(../images/contact-mktg-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #1559bc;
   -moz-box-shadow: -3px -6px 10px rgba(32, 32, 34, 0.25);
   -webkit-box-shadow: -3px -6px 10px rgba(32, 32, 34, 0.25);
   box-shadow: -3px -6px 10px rgba(32, 32, 34, 0.25);
 }
-/* line 179, ../sass/style.scss */
+/* line 245, ../sass/style.scss */
+.contact-section h3 {
+  font-size: 30px;
+}
+/* line 246, ../sass/style.scss */
 .contact-section h4 {
   font-size: 30px;
   margin: 0;
   text-transform: uppercase;
   text-align: center;
 }
-/* line 180, ../sass/style.scss */
+/* line 247, ../sass/style.scss */
 .contact-section svg {
   margin: 0 auto 40px;
   display: block;
   width: 154px;
   height: 178px;
 }
-/* line 181, ../sass/style.scss */
+/* line 248, ../sass/style.scss */
 .contact-section .path {
   stroke-dashoffset: 1940;
   stroke: white;
@@ -617,7 +791,7 @@ input[type="checkbox"], input[type="radio"] {
   -webkit-animation: draw 10s linear infinite;
   -moz-animation: draw 10s linear infinite;
 }
-/* line 189, ../sass/style.scss */
+/* line 256, ../sass/style.scss */
 .contact-section .path.fillpath {
   stroke: white;
   stroke-width: 0.25;
@@ -652,17 +826,18 @@ input[type="checkbox"], input[type="radio"] {
     fill-opacity: 0;
   }
 }
-/* line 219, ../sass/style.scss */
+/* line 286, ../sass/style.scss */
 #footer {
   background: #201b18;
   padding: 15px 0;
   color: #fff;
+  font-size: 16px;
 }
-/* line 222, ../sass/style.scss */
+/* line 289, ../sass/style.scss */
 #footer .row a {
   color: #fff;
 }
-/* line 224, ../sass/style.scss */
+/* line 291, ../sass/style.scss */
 #footer .row .text-right p {
   margin: 0;
   text-transform: uppercase;

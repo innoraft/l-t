@@ -121,7 +121,7 @@ input[type="checkbox"], input[type="radio"] { margin:4px 8px 0 ; vertical-align:
 }
 
 #mainbanner { 
-	height:652px; background:url(../images/banner-bg.jpg) 50% 50% no-repeat;  @extend %background-full; color:$white; 
+	height:652px; background-image:url(../images/banner-bg.jpg); background-position:50% 50%; background-repeat:no-repeat;  @extend %background-full; color:$white; 
 	.container { height:100%; }
 	.box-table {
 		width:900px; margin:0 auto; text-align:center; 
@@ -149,34 +149,101 @@ input[type="checkbox"], input[type="radio"] { margin:4px 8px 0 ; vertical-align:
 
 .readmore {
 	font-size:25px; margin:0 auto; display:block; width:100px; color:$white; text-transform:uppercase;
+	&.dark { color:$font-color; }
 }
 
 
 // ---------------------------------Main Section-----------------------------------
 .section { 
-	padding:30px 0; 
+	padding:100px 0; 
 	h3 { text-align:center; margin:0; text-transform:uppercase; font-size:$font-size-h3; margin:0 0 40px; }	
+	&.xs-section { padding:42px 0; }
 }
 
+.journey-section {
+	background:$grey;  color:$white; position:relative; overflow:hidden;
+	.strip { border-top:10px solid $light-grey; border-right:10px solid transparent; width:0; height:0; position:absolute; left:0; top:0; }
+	.container { 
+		position:relative; z-index:10; 
+		h3 { margin:0 0 100px; }
+		blockquote { font-size:$font-size-h1; border:0; padding:0 50px; line-height:1.25; text-align:center; }
+		
+		.right-container {
+			.col-container { padding-left:70px; }
+			p { 
+				margin:30px 0 0; 
+				&:first-child { margin:0; font-size:$font-size-lm; }
+			}	
+		}
+	}
+}
+
+.video-section {
+	.left-container{
+		.col-container{ 
+			padding-right:50px; 
+		 	h3 { text-align:left; }
+		 }	
+	}
+}
+
+.who-we-are-section {
+	background-image:url(../images/who-we-are-bg.jpg); background-position:50% 50%; background-repeat:no-repeat; @extend %background-full; color:$white; 
+		p { 
+			margin:30px 0 0; 
+		}	
+		h3 + p { margin:0; }
+}
+
+.employer-section {
+	background-image:url(../images/employer-bg.jpg); background-position:50% 50%; background-repeat:no-repeat; @extend %background-full; color:$white;
+	h3 { text-align:left; }
+	p { 
+		margin:30px 0 0; 
+		&:first-child { margin:0; }
+	}	
+	.container-row { width:53.5%; }
+}
+
+.mission-section {
+	h3 { text-align:right; }
+	.container-row { width:55.83333333333333%; text-align:right; }
+	.readmore { display:inline-block; margin:0; }
+}
+
+.imagineering-section {
+	background-image:url(../images/imagineering-section.jpg); background-position:50% 50%; background-repeat:no-repeat; @extend %background-full; color:$white;
+	.col-container { background:$blue-nav; padding:24px; }
+	.box-summary { margin:30px 0 0; }
+	h4 { 
+		font-size:$font-size-h6; text-transform:uppercase; margin:0; text-align:center; 
+		a { color:$white; }
+	}
+	.item { margin:0 15px; }
+	.carousel-section .slick-slide img { width:100%; height:auto; }
+	
+}
 
 .communication-section {
-	background:url(../images/communication-bg.jpg) 0 0 no-repeat; @extend %background-full; color:$white;
+	background-image:url(../images/communication-bg.jpg); background-position:50% 50%; background-repeat:no-repeat; @extend %background-full; color:$white;
 	.col-sm-4 { margin:0 0 30px; }
 	.col-container { 
 		background:rgba(75,88,111,.5);  
 		h4 { 
-			font-size:26px; margin:0; letter-spacing:-0.055em;
+			font-size:26px; margin:0; letter-spacing:-0.055em; 
 			span { display:block; }
 		}
 		.icon { width:90px; height:90px; border:1px solid $blue; display:block; position:absolute; left:40px; top:50%; margin-top:-45px; text-indent:-999em; }
 		.col-summary { height:100%; padding:40px 40px 40px 138px; }
+		
 	}
 	
 }	
 
 .contact-section {
-	color:$white; background:url(../images/contact-mktg-bg.jpg) 0 0 no-repeat $dark-blue; @extend %background-full; @include box-shadow(-3px -6px 10px rgba(32, 32, 34, 0.25));
-	h4 { font-size:$font-size-h3; margin:0; text-transform:uppercase; text-align:center; }
+	color:$white; background-image:url(../images/contact-mktg-bg.jpg); background-repeat:no-repeat; background-position:0 0;  background-color:$dark-blue; @extend %background-full;  @include box-shadow(-3px -6px 10px rgba(32, 32, 34, 0.25));
+	h3 { font-size:$font-size-h5; }
+	h4 { font-size:$font-size-h5; margin:0; text-transform:uppercase; text-align:center; }
 	svg { margin:0 auto 40px; display:block; width:154px; height:178px; }
 	.path { stroke-dashoffset:1940; stroke:rgb(255,255,255); 
 		stroke-width:0.25;
@@ -217,7 +284,7 @@ input[type="checkbox"], input[type="radio"] { margin:4px 8px 0 ; vertical-align:
 
 // ---------------------------------Footer-----------------------------------
 #footer { 
-	background:$dark-gray; padding:$padding-small-horizontal+5 0; color:$white; 
+	background:$dark-gray; padding:$padding-small-horizontal+5 0; color:$white; font-size:$font-size-small;
 	.row {
 		a { color:$white; }
 		.text-right {

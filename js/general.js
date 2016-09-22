@@ -50,14 +50,21 @@
 		$(window).on('resize', function(){
 			if (screencheck(767)) {
 			}
-			
-			if($('.journey-section .strip').length){
-				$this = $('.strip');
-				$height = $this.parents('.journey-section').height();
-				$borderHeight = parseInt($winW()/1.6);
-				$('.journey-section .strip').css('border-top-width',$winW()*1.6);
-				$('.journey-section .strip').css('border-right-width', $borderHeight);
+			$borderHeight = parseInt($winW()/4);
+			if($('.strip-01').length){
+				$('.strip-01').css('border-bottom-width',$winW()-$borderHeight-68);
+				$('.strip-01').css('border-left-width', $borderHeight);
 			}
+			
+			if($('.strip-03').length){
+				$('.strip-03').css('border-bottom-width',$winW()*2-$borderHeight);
+				$('.strip-03').css('border-left-width', $winW()/2+170);
+			}
+			
+			$('.strip-line').css('height',$winW());
+			
+			$stripWidth = $('.video-section .strip-01').width();
+			$('.section-container > .strip').css('width',$borderHeight+72)
 		}).resize();
 
 
@@ -89,6 +96,10 @@
 		
 		if($('.carousel-section .box-summary').length){
 			$('.carousel-section .box-summary').matchHeight();
+		}
+		
+		if($('.equalheight').length){
+			$('.equalheight').matchHeight();
 		}
 		
 		

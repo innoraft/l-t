@@ -77,6 +77,8 @@ $padding-xs-horizontal:5px !default;
 }
 
 %background-full{
+	background-position:50% 50%; 
+	background-repeat:no-repeat; 
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;

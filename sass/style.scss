@@ -148,25 +148,55 @@ input[type="checkbox"], input[type="radio"] { margin:4px 8px 0 ; vertical-align:
 }
 
 .readmore {
-	font-size:25px; margin:0 auto; display:block; width:100px; color:$white; text-transform:uppercase;
+	font-size:25px; margin:0 auto; display:block; width:126px; position:relative; color:$white; padding-right:62px; text-transform:uppercase;
 	&.dark { color:$font-color; }
+	&:before { width:46px; height:46px; border:1px solid $white; position:absolute; @include border-radius(50%); right:0; top:50%; margin-top:-23px; content:""; }
+	&:after { content:""; position:absolute; right:2px; top:-2px; @include sprites(46,46,-89,-237); @include transform (rotate(-90deg)); }
+	&:hover { color:$white; }
+	&.dark:hover { color:$font-color; }
+	&.dark:before { border:1px solid $font-color; }
+	&.dark:after { @include sprites(46,46,-158,-237); right:2px; top:-2px; }
 }
 
+.round-button { 
+	width:116px; height:116px; border:1px solid $white; color:$white; @include border-radius(50%); position:absolute; right:0; text-align:center; line-height:116px; top:0; text-transform:uppercase; font-family:$font-family-bold; bottom:0; margin:auto; left:0;
+	&:hover { background:$blue-light; color:$white; border-color:$blue-light; } 
+	span { line-height:1.15; display:inline-block; vertical-align:middle; position:relative; top:-2px; }
+}
 
 // ---------------------------------Main Section-----------------------------------
+.section-container { position:relative; overflow:hidden; }
+.section-container > .strip { right:-80px; width:337px; left:auto; z-index:20; background:rgba(0,0,0,.5); }
 .section { 
 	padding:100px 0; 
 	h3 { text-align:center; margin:0; text-transform:uppercase; font-size:$font-size-h3; margin:0 0 40px; }	
-	&.xs-section { padding:42px 0; }
+	
 }
+.section-box-info { position:relative; overflow:hidden; }
+.section-box { padding:100px 0; position:relative; z-index:100; }
+
+
+.strip { position:absolute; left:0; top:0; height:100%; }
+.strip-01 { position:absolute; right:0; margin-left:0; top:0; width:0; height:0; border-bottom:944px solid $grey; border-left:472px solid transparent; } 
+.strip-02 { position:absolute; left:100%; margin-left:0; top:0; width:0; height:0; border-top:944px solid $light-grey; border-right:472px solid transparent; } 
+.strip-03 { position:absolute; right:100%; margin-left:0; top:0; width:0; height:0; border-bottom:944px solid rgba(0,0,0,.5); border-left:472px solid transparent; z-index:100; }
+
+.strip-line { width:30px; height:100%; position:absolute; left:0; @include transform(rotate(18deg)); transform-origin:left top;  top:-30px; background:blue; }
+
 
 .journey-section {
-	background:$grey;  color:$white; position:relative; overflow:hidden;
-	.strip { border-top:10px solid $light-grey; border-right:10px solid transparent; width:0; height:0; position:absolute; left:0; top:0; }
+	background:$grey;  color:$white; position:relative; overflow:hidden; padding:0;
+	&:before { content:""; width:50%; height:100%; background:$light-grey; position:absolute; left:0; top:0; }
+	.strip { width:/*36.25%*/61.875%; background:$light-grey; }
+	
 	.container { 
 		position:relative; z-index:10; 
 		h3 { margin:0 0 100px; }
-		blockquote { font-size:$font-size-h1; border:0; padding:0 50px; line-height:1.25; text-align:center; }
+		blockquote { 
+			font-size:$font-size-h1; border:0; padding:0 50px; line-height:1.25; text-align:center; 
+			&:before, &:after  { content:""; position:absolute; left:50px; bottom:100%; margin-bottom:-20px; @include sprites(76,86,-2,-218);  }
+			&:after { left:auto; bottom:auto; margin-bottom:0; right:50px; top:100%; margin-top:-40px;  }	
+		}
 		
 		.right-container {
 			.col-container { padding-left:70px; }
@@ -179,6 +209,12 @@ input[type="checkbox"], input[type="radio"] { margin:4px 8px 0 ; vertical-align:
 }
 
 .video-section {
+	position:relative; overflow:hidden;
+	.strip { width:55%; background:#fff; }
+	.strip-01 { border-bottom-color:#fff; z-index:25; margin-left:-60px; right:auto; left:100%; @include transform(rotate(180deg)); }
+	.strip-02 { border-top-color:#fed253; margin:-30px 0 0 20px; display:none; z-index:20; @include transform(rotate(3deg));  }
+	&:before { content:""; width:44%; height:100%; right:0; top:0; position:absolute; background-image:url(../images/video-bg.jpg); background-position:0 0; @extend %background-full;  }
+	.container { position:relative; z-index:30; }
 	.left-container{
 		.col-container{ 
 			padding-right:50px; 
@@ -188,36 +224,61 @@ input[type="checkbox"], input[type="radio"] { margin:4px 8px 0 ; vertical-align:
 }
 
 .who-we-are-section {
-	background-image:url(../images/who-we-are-bg.jpg); background-position:50% 50%; background-repeat:no-repeat; @extend %background-full; color:$white; 
-		p { 
-			margin:30px 0 0; 
-		}	
-		h3 + p { margin:0; }
+	background-image:url(../images/who-we-are-bg.jpg); @extend %background-full; color:$white; position:relative; overflow:hidden; @include box-shadow(-3px -6px 10px rgba(32, 32, 34, 0.25)); z-index:30;
+	.strip { width:42%; background:red; right:0; left:auto; }
+	.strip-01 { right:100%; }
+	.container { position:relative; z-index:30; }
+	.col-container { padding-left:70px; }
+	p { 
+		margin:30px 0 0; 
+	}	
+	h3 + p { margin:0; }
+}
+.carousel-section {
+	.slick-prev { left:-50px; }
+	.slick-next { right:-60px; }	
 }
 
 .employer-section {
-	background-image:url(../images/employer-bg.jpg); background-position:50% 50%; background-repeat:no-repeat; @extend %background-full; color:$white;
+	background-image:url(../images/employer-bg.jpg); overflow:hidden; @extend %background-full; color:$white; position:relative; @include box-shadow(-3px -6px 10px rgba(32, 32, 34, 0.25));
 	h3 { text-align:left; }
+	.strip { width:56%; background:rgba(7,11,15,.7);}
+	.strip-01 { border-bottom-color:rgba(7,11,15,.7); @include transform(rotate(180deg)); right:auto; left:100%; }
 	p { 
 		margin:30px 0 0; 
 		&:first-child { margin:0; }
+		&.highlight { font-family:$font-family-regular; }
 	}	
 	.container-row { width:53.5%; }
+	.container-row-right { 
+		width:46.5%; 
+		.round-button { font-size:$font-size-small; left:146px; }
+	}
 }
 
 .mission-section {
-	h3 { text-align:right; }
+	position:relative; overflow:hidden; padding:0;
+	&:before { width:50%; height:100%; content:""; background-image:url(../images/mission-bg.jpg); position:absolute; @extend %background-full; left:0; top:0; }
+	h3 { text-align:right; padding-left:110px; }
 	.container-row { width:55.83333333333333%; text-align:right; }
+	.col-container { padding-left:20px; }
 	.readmore { display:inline-block; margin:0; }
+	.strip { width:50%; right:0; left:auto; }
+	.strip-01 { left:auto; right:100%;  border-bottom-color:$white; z-index:25;  margin-right:-22px; }
+	.strip-line { background:#fed153; }
+
 }
 
 .imagineering-section {
-	background-image:url(../images/imagineering-section.jpg); background-position:50% 50%; background-repeat:no-repeat; @extend %background-full; color:$white;
+	background-image:url(../images/imagineering-section.jpg); @extend %background-full; color:$white;
 	.col-container { background:$blue-nav; padding:24px; }
 	.box-summary { margin:30px 0 0; }
 	h4 { 
 		font-size:$font-size-h6; text-transform:uppercase; margin:0; text-align:center; 
-		a { color:$white; }
+		a { 
+			color:$white; display:block; 
+			&:after { content:">>"; display:inline-block; margin-left:5px; }
+		}
 	}
 	.item { margin:0 15px; }
 	.carousel-section .slick-slide img { width:100%; height:auto; }
@@ -225,23 +286,38 @@ input[type="checkbox"], input[type="radio"] { margin:4px 8px 0 ; vertical-align:
 }
 
 .communication-section {
-	background-image:url(../images/communication-bg.jpg); background-position:50% 50%; background-repeat:no-repeat; @extend %background-full; color:$white;
+	background-image:url(../images/communication-bg.jpg); @extend %background-full; color:$white;
 	.col-sm-4 { margin:0 0 30px; }
+	.icon { width:90px; height:90px; border:1px solid $blue; display:block; position:absolute; left:40px; top:50%; margin-top:-45px; text-indent:-999em; }
+	.icon:after { position:absolute; left:0; width:90px; content:""; height:90px; top:0; background:url(../images/bgi/sprite.png) 0 0 no-repeat; }
+	.compelling-col .icon:after { background-position:-31px -26px; }
+	.evoke-col .icon:after { background-position:-138px -26px; }
+	.contextual-col .icon:after { background-position:-241px -26px; }
+	.conversational-col .icon:after { background-position:-31px -131px; }
+	.clear-icon .icon:after { background-position:-138px -131px; }
+	.adaptable-col .icon:after { background-position:-241px -131px; }
 	.col-container { 
 		background:rgba(75,88,111,.5);  
 		h4 { 
 			font-size:26px; margin:0; letter-spacing:-0.055em; 
 			span { display:block; }
 		}
-		.icon { width:90px; height:90px; border:1px solid $blue; display:block; position:absolute; left:40px; top:50%; margin-top:-45px; text-indent:-999em; }
+		
 		.col-summary { height:100%; padding:40px 40px 40px 138px; }
 		
 	}
 	
 }	
 
+.stackholder-section {
+	position:relative; overflow:hidden;
+	.container { position:relative; z-index:10; }
+	.strip { width:50%; }	
+	.strip-01 { @include transform(rotate(180deg)); right:auto; left:0; top:auto; bottom:0; border-bottom-color:#efefef }
+}
+
 .contact-section {
-	color:$white; background-image:url(../images/contact-mktg-bg.jpg); background-repeat:no-repeat; background-position:0 0;  background-color:$dark-blue; @extend %background-full;  @include box-shadow(-3px -6px 10px rgba(32, 32, 34, 0.25));
+	color:$white; background-image:url(../images/contact-mktg-bg.jpg); background-color:$dark-blue; @extend %background-full;  @include box-shadow(-3px -6px 10px rgba(32, 32, 34, 0.25));
 	h3 { font-size:$font-size-h5; }
 	h4 { font-size:$font-size-h5; margin:0; text-transform:uppercase; text-align:center; }
 	svg { margin:0 auto 40px; display:block; width:154px; height:178px; }

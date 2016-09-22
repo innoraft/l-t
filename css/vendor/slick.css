@@ -24,8 +24,12 @@
 .slick-loading .slick-list { background: #fff url('../../images/bgi/ajax-loader.gif') center center no-repeat; }
 
 /* Arrows */
-.slick-prev, .slick-next { font-size: 0; line-height: 0; position: absolute; top: 50%; display: block; width: 20px; height: 20px; padding: 0; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); cursor: pointer; color: transparent; border: none; outline: none; background: transparent; }
+.slick-prev, .slick-next { font-size: 0; line-height: 0; position: absolute; top: 50%; display: block; width:52px; height:52px; padding:0; border:2px solid #fff; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); cursor: pointer; color: transparent; border-radius:50%; outline: none; background: transparent; }
 .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus { color: transparent; outline: none; background: transparent; }
+
+.slick-prev:before, .slick-next:after { content:""; width:52px; height:52px; background:url(../../images/bgi/sprites.svg) -89px -237px no-repeat; position:absolute; left:-3px; top:-2px; }
+
+.slick-next:after { transform:rotate(180deg); -webkit-transform:rotate(180deg); -moz-transform:rotate(180deg); -ms-transform:rotate(180deg); left:auto; right:-3px; }
 
 .slick-prev { left: -25px; }
 [dir='rtl'] .slick-prev { right: -25px; left: auto; }

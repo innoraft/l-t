@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="css/vendor/bootstrap.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/vendor/slick.css">
+<link rel="stylesheet" href="css/vendor/venobox.css">
 <link rel="stylesheet" href="css/responsive.css">
 <script src="js/vendor/modernizr.min.js"></script>
 <!--[if IE 9]>
@@ -21,23 +22,24 @@
 	<header id="header">
     	<div class="top-header">
         	<div class="container">
-                <a href="#" id="logo">
-              		<img src="images/logo.png" alt="L & T Technology Services">      
+                <a href="#" id="logo" title="L &amp; T Technology Services">
+              		<img src="images/logo.png" alt="L &amp; T Technology Services">      
                 </a>
             </div><!--/.container-->
         </div><!--/.top-header-->
     </header><!--/#header-->
-    <nav id="mainmenu">
+    <nav id="mainmenu" data-spy="affix" data-offset-top="170">
     	<div class="container">
         	<ul>
-            <li><a href="#" title="The Journey">The Journey</a></li>
-            <li><a href="#" title="Who we are">Who we are</a></li>
-            <li><a href="#" title="CEO BLOGS">CEO BLOGS</a></li>
-            <li><a href="#" title="Accolades">Accolades</a></li>
-            <li><a href="#" title="Imagineering">Imagineering</a></li>  
-            <li><a href="#" title="Our Objective">Our Objective</a></li>
-            <li><a href="#" title="Resources">Resources</a></li>
-            <li><a href="#" title="Events">Events</a></li>
+                <li><a href="#mainbanner" title="mainbanner">Home</a></li>
+                <li><a href="#journey-section" title="The Journey">The Journey</a></li>
+                <li><a href="#who-we-are-section" title="Who we are">Who we are</a></li>
+                <li><a href="#ceo-blog" title="CEO BLOGS">CEO BLOGS</a></li>
+                <li><a href="#" title="Accolades">Accolades</a></li>
+                <li><a href="#imagineering-section" title="Imagineering">Imagineering</a></li>  
+                <li><a href="#objective-section" title="Our Objective">Our Objective</a></li>
+                <li><a href="#" title="Resources">Resources</a></li>
+                <li><a href="#" title="Events">Events</a></li>
             </ul>
         </div>
     </nav>
@@ -47,322 +49,433 @@
             	<div class="box-info">
             		<h3>When <strong>curiosity</strong> takes over, <span>the <strong>future</strong> is full of <strong>possibilities</strong></span></h3>    
                 	<a href="#">#Be Curious</a>
-                    <div class="btn-group">
-                        <a href="#" class="curious-icon">BE CURIOUS</a>
-                        <a href="#" class="find-icon">FIND OUT</a>
-                        <a href="#" class="something-icon">DO SOMETHING</a>
-                    </div>
+                    <ul>
+                        <li class="curious-icon">Be Curious</li>
+                        <li class="find-icon">FIND OUT</li>
+                        <li class="something-icon">DO SOMETHING</li>
+                    </ul>
+                    <div class="mouse-icon">
+                    	<svg x="0px" y="0px" width="90" height="98" viewBox="0 0 38 43.5" enable-background="new 0 0 38 43.5" version="1.1">
+							<g id="Group" fill="none"><!--CHANGE LINE COLOUR-->
+								<path fill-rule="evenodd"  class="path" clip-rule="evenodd" d="M24.6,41.332l12.111-22.29L19.903,1.61L1.155,23.125l2.072,8.471
+							l8.233,7.638L24.6,41.332z"/>
+								<path fill-rule="evenodd" class="path" clip-rule="evenodd" d="M24.25,41.125L19.903,1.61l14.185,4.329L24.25,41.125z"/>
+								<path fill-rule="evenodd" class="path" clip-rule="evenodd" d="M34.088,5.939l2.719,13.14L11.475,39.211L1.147,23.17 L34.088,5.939z"/>
+								<path fill-rule="evenodd" class="path" clip-rule="evenodd"  d="M1.755,23.521l22.135,17.443L3.85,31.993L20.511,2.116"/>
+							</g>
+						</svg>
+                        <span class="mouse">Mouse</span>
+                    </div><!--/.mouse-icon-->
                 </div><!--/.box-info-->
             </div><!--/.box-table-->
         </div><!--/.container-->
     </div><!--/#mainbanenr-->
 	<div id="main">
-		<div class="section journey-section">
-        	<div class="container">
-            	<div class="section-box-info">
-            		<span class="strip"><span class="strip-01">&nbsp;</span></span>
-                    <div class="section-box">
-                        <h3>The Journey of the Curious </h3>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="col-container">
-                                    <blockquote>
-                                        <p>Your old road is<br> rapidly agin’... <br> Please get out of the<br> new one if you can't<br> lend your hand,<br> For the times they are<br> a-changin’...</p>
-                                    </blockquote>
-                                </div><!--/.col-container-->
-                            </div><!--/.col-sm-6-->
-                            <div class="col-sm-6 right-container">
-                                <div class="col-container">
-                                    <p>Sang Bob Dylan in an iconic song. </p>
-                                    <p>For us also, times have changed and we need to reflect the realities of today and possibilities of tomorrow - as a brand, as a business, and as an engineering powerhouse. </p>
-                                    <p>In the world’s eye, perception is stronger than reality. We must ensure we are perceived for our strengths, capabilities and relevance in this new era. And then the questions were born – Who are we? And what do we stand for? What is it that is going to propel us into the next orbit of success?</p>                    
-                                </div><!--/.col-container-->
-                           </div><!--/.col-sm-6-->
+		<div class="section-container" id="journey-section">
+            <div class="section">
+                <div class="container">
+                    <div class="section-box-info">
+                        <span class="strip"><span class="strip-01">&nbsp;</span></span>
+                        <div class="section-box">
+                            <h3>The Journey of the Curious </h3>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="col-container">
+                                        <blockquote>
+                                            <p>Your old road is<br> rapidly agin’... <br> Please get out of the<br> new one if you can't<br> lend your hand,<br> For the times they are<br> a-changin’...</p>
+                                        </blockquote>
+                                    </div><!--/.col-container-->
+                                </div><!--/.col-sm-6-->
+                                <div class="col-sm-6 right-container">
+                                    <div class="col-container">
+                                        <p>Sang Bob Dylan in an iconic song. </p>
+                                        <p>For us also, times have changed and we need to reflect the realities of today and possibilities of tomorrow - as a brand, as a business, and as an engineering powerhouse. </p>
+                                        <p>In the world’s eye, perception is stronger than reality. We must ensure we are perceived for our strengths, capabilities and relevance in this new era. And then the questions were born – Who are we? And what do we stand for? What is it that is going to propel us into the next orbit of success?</p>                    
+                                    </div><!--/.col-container-->
+                               </div><!--/.col-sm-6-->
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div><!--/.section-->
-        <div class="section-container">
-        	<span class="strip"><span class="strip-03">&nbsp;</span></span>
-            <div class="section video-section">
-            	<span class="strip"><span class="strip-01">&nbsp;</span></span>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-8 left-container equalheight">
-                            <div class="col-container">
-                                <h3>The future belongs to the curious. To those who are not afraid to try it, explore it, poke at it, question it and turn it inside out.</h3>
-                                <p>Let's not be hamsters on a wheel running the same circle over and over again. Let's be explorers. Its time go on a voyage of discovery and explore the seas. Let's go boldly where no man has gone before and push the limits of technology. Let's feel the wonder and enthusiasm again!</p>
-                                <p>Let us <a href="#">#BeCurious.</a></p>
-                            </div><!--/.col-container-->
-                        </div><!--/.col-sm-8-->
-                        <div class="col-sm-4 right-container equalheight">
-                        	<a href="#" class="round-button"><span>Play Video</span></a>
-                        </div>
-                        
-                    </div><!--/.row-->
-                </div><!--/.container-->
             </div><!--/.section-->
-            <div class="section who-we-are-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="col-container">
-                                &nbsp;
-                            </div><!--/.col-container-->
-                        </div><!--/.col-sm-6-->
-                        <div class="col-sm-6">
-                        	 <div class="col-container">
-                            <h3>Who we are</h3>
-                            <p>"The important thing is not to stop questioning. Curiosity has its own reason for existing," said Albert Einstein. We couldn't agree more. </p>
-                            <p>That's who we are - </p>
-                            <p>CURIOUS - Engineering possibilities for better enriched products, services and life</p>
-                            <p>EXPLORERS - Discovering innovative ways to build a sustainable future</p>
-                            <p>STORYTELLERS - A 75-year heritage of parent company, Larsen &amp; Toubro</p>
+        </div><!--/.section-container-->
+        
+        <div class="muti-section-container">
+        	<span class="strip-space">&nbsp;</span>
+            <div class="section-container" id="video-section">
+                <div class="section">
+                    <div class="container">
+                        <div class="section-box-info">
+                        	<div class="overlay-bg">&nbsp;</div>
+                        	<span class="strip"><span class="strip-01">&nbsp;</span><span class="strip-02">&nbsp;</span></span>
+                        	<div class="section-box">
+                                <div class="row">
+                                    <div class="col-sm-8 left-container equalheight">
+                                        <div class="col-container">
+                                            <h3>The future belongs to the curious. To those who are not afraid to try it, explore it, poke at it, question it and turn it inside out.</h3>
+                                            <p>Let's not be hamsters on a wheel running the same circle over and over again. Let's be explorers. Its time go on a voyage of discovery and explore the seas. Let's go boldly where no man has gone before and push the limits of technology. Let's feel the wonder and enthusiasm again!</p>
+                                            <p>Let us <a href="#">#BeCurious.</a></p>
+                                        </div><!--/.col-container-->
+                                    </div><!--/.col-sm-8-->
+                                    <div class="col-sm-4 right-container equalheight">
+                                        <a class="round-button video-button" data-type="youtube" href="https://youtu.be/ij1jFasFivs"><span>Play Video</span></a>
+                                    </div>
+                                    
+                                </div><!--/.row-->
+                            </div><!--/.section-box-->
+                        </div><!--/.section-box-info-->
+                    </div><!--/.container-->
+                </div><!--/.section-->
+            </div><!--/.section-container-->
+            
+            <div class="section-container" id="who-we-are-section">
+                <div class="section">
+                    <div class="container">
+                        <div class="section-box-info">
+                            <span class="strip"><span class="strip-01">&nbsp;</span></span>
+                            <div class="section-box">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="col-container equalheight">
+                                            <a class="round-button" href="#"><span>Download fact sheet</span></a>
+                                        </div><!--/.col-container-->
+                                    </div><!--/.col-sm-6-->
+                                    <div class="col-sm-6">
+                                         <div class="col-container equalheight">
+                                        <h3>Who we are</h3>
+                                        <p>"The important thing is not to stop questioning. Curiosity has its own reason for existing," said Albert Einstein. We couldn't agree more. </p>
+                                        <p>That's who we are - </p>
+                                        <p>CURIOUS - Engineering possibilities for better enriched products, services and life</p>
+                                        <p>EXPLORERS - Discovering innovative ways to build a sustainable future</p>
+                                        <p>STORYTELLERS - A 75-year heritage of parent company, Larsen &amp; Toubro</p>
+                                        </div>
+                                    </div>
+                                </div><!--/.row-->
+                            </div><!--/.section-box-->
+                        </div><!--/.section-box-info-->
+                    </div><!--/.container-->
+                </div><!--/.section-->
+            </div><!--/.section-container-->
+        </div>
+        
+        <div class="section-container" id="ceo-blog">
+        	<div class="section">
+            	<div class="slider-section">
+                	<div class="item item-01">
+                    	<div class="container">
+                            <div class="box-info">
+                            	<div class="box-info-content">
+                                <h4>We nurture the need to know and to explore – because when you are curious great things can happen. You have fun exploring concepts, products, possibilities, and you deliver solutions to even the most puzzling problems.</h4>
+                                <div class="profile-summary">
+                                	<h5>Dr. Keshab Panda</h5>
+                                    <h6>Managing Director &amp; CEO <span>L&T Technology Services</span></h6>
+                                    <a href="#" class="btn btn-primary">Read Blog</a>
+                                </div>
+                                </div>
                             </div>
-                        </div>
-                    </div><!--/.row-->
+                        </div><!--/.container-->
+                    </div>
+                    <div class="item item-02">
+                    	<div class="container">
+                            <div class="box-info">
+                            	<div class="box-info-content">
+                                <h4>We nurture the need to know and to explore – because when you are curious great things can happen. You have fun exploring concepts, products, possibilities, and you deliver solutions to even the most puzzling problems.</h4>
+                                <div class="profile-summary">
+                                	<h5>Dr. Keshab Panda</h5>
+                                    <h6>Managing Director &amp; CEO <span>L&T Technology Services</span></h6>
+                                	<a href="#" class="btn btn-primary">Read Blog</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div><!--/.container-->
+                    </div>
+                </div>
+            </div>
+        </div><!--/.section-container-->
+        
+        <div class="section-container" id="employer-section">
+            <div class="section">
+            	<span class="strip-space">&nbsp;</span>
+                <div class="container">
+                    <div class="section-box-info">
+                        <span class="strip"><span class="strip-01">&nbsp;</span></span>
+                        <div class="section-box">
+                            <div class="row">
+                                <div class="col-sm-6 container-row">
+                                    <div class="col-container equalheight">
+                                        <h3>Employer of the year!</h3>
+                                        <p>At L&amp;T TS, we are not on a job, it's simply something we enjoy doing! There are loads of facilities we can make use of including training programs, diverse workshops, open forums, and focus groups connected across the world to help us learn, grow and excel to become who we really want to be! </p>
+                                        <p>More so why we are one among the 9000+ across the globe, happy to be a part of the Company of the Year.</p>
+                                        <p class="highlight">Ranked the Company of the Year 2016: IACC</p>
+                                    </div><!--/.col-container-->
+                                </div><!--/.col-sm-6-->
+                                <div class="col-sm-6 container-row-right">
+                                    <div class="col-container equalheight">
+                                        <a href="#" class="round-button"><span>More Accolades</span></a>
+                                    </div><!--/.col-container-->
+                                </div><!--/.col-sm-6-->
+                            </div><!--/.row-->
+                        </div><!--/.section-box-->
+                    </div><!--/.section-box-info-->
                 </div><!--/.container-->
             </div><!--/.section-->
         </div>
-    	<div class="section employer-section">
-        	<span class="strip"><span class="strip-01">&nbsp;</span></span>
-        	<div class="container">
-            	<div class="row">
-                	<div class="col-sm-6 container-row">
-                    	<div class="col-container equalheight">
-                        	<h3>Employer of the year!</h3>
- 							<p>At L&amp;T TS, we are not on a job, it's simply something we enjoy doing! There are loads of facilities we can make use of including training programs, diverse workshops, open forums, and focus groups connected across the world to help us learn, grow and excel to become who we really want to be! </p>
-                            <p>More so why we are one among the 9000+ across the globe, happy to be a part of the Company of the Year.</p>
-                            <p class="highlight">Ranked the Company of the Year 2016: IACC</p>
-                        </div>
+        
+        
+        <div class="section-container" id="mission-section">
+            <div class="section">
+                <div class="container">
+                    <div class="section-box-info">
+                        <span class="strip"><span class="strip-01">&nbsp;</span><span class="strip-line">&nbsp;</span></span>
+                    <div class="section-box">
+                        <div class="row">
+                            <div class="col-sm-6 container-row pull-right">
+                                <div class="col-container">
+                                    <h3>We live by a simple mission - Be the best, lead the curve, nurture brilliance, obsess about customer delight.</h3>
+                                    <p>Our knowledge of market dynamics, customer pain areas and business trends, helps us identify cutting-edge solutions and innovative ideas, always setting new trends. That's exactly why over 50+ leading Fortune 500 companies including P&amp;G, UTC, Danaher, Eaton, Rockwell Automation, Scania and Calsonic Kansei are here with us to explore the possibilities of tomorrow</p>
+                                    <a href="#" class="readmore dark">More</a>
+                                </div><!--/.col-container-->
+                            </div><!--/.col-sm-6-->
+                        </div><!--/.row-->
                     </div>
-                    <div class="col-sm-6 container-row-right">
-                    	<div class="col-container equalheight">
-                    		<a href="#" class="round-button"><span>More Accolades</span></a>
-                		</div>
                     </div>
-                </div><!--/.row-->
-            </div><!--/.container-->
-        </div><!--/.section-->
-        <div class="section mission-section">
-        	
-        	<div class="container">
-            	
-            	<div class="section-box-info">
-                	<span class="strip"><span class="strip-01">&nbsp;</span><span class="strip-line">&nbsp;</span></span>
-                <div class="section-box">
-                    <div class="row">
-                        <div class="col-sm-6 container-row pull-right">
+                </div><!--/.container-->
+            </div><!--/.section-->
+        </div><!--/.section-container-->
+        
+        <div class="section-container" id="imagineering-section">
+            <div class="section">
+                <div class="container">
+                    <h3>Our commitment to Imagineering</h3>
+                    <div class="carousel-section">
+                        <div class="item">
                             <div class="col-container">
-                                <h3>We live by a simple mission - Be the best, lead the curve, nurture brilliance, obsess about customer delight.</h3>
-                                <p>Our knowledge of market dynamics, customer pain areas and business trends, helps us identify cutting-edge solutions and innovative ideas, always setting new trends. That's exactly why over 50+ leading Fortune 500 companies including P&amp;G, UTC, Danaher, Eaton, Rockwell Automation, Scania and Calsonic Kansei are here with us to explore the possibilities of tomorrow</p>
-                                <a href="#" class="readmore dark">More</a>
+                                <figure>
+                                    <a href="#"><img src="images/imagineering-thumb-01.jpg" alt=""></a>
+                                </figure>
+                                <div class="box-summary">
+                                    <h4><a href="#">Smarter living with connected thermostats</a></h4>
+                                </div><!--/.box-summary-->
                             </div><!--/.col-container-->
-                        </div><!--/.col-sm-6-->
+                        </div><!--/.item-->
+                        <div class="item">
+                            <div class="col-container">
+                                <figure>
+                                    <a href="#"><img src="images/imagineering-thumb-02.jpg" alt=""></a>
+                                </figure>
+                                <div class="box-summary">
+                                    <h4><a href="#">Sustainability in healthcare with reusable staplers</a></h4>
+                                </div><!--/.box-summary-->
+                            </div><!--/.col-container-->
+                        </div><!--/.item-->
+                        <div class="item">
+                            <div class="col-container">
+                                <figure>
+                                    <a href="#"><img src="images/imagineering-thumb-03.jpg" alt=""></a>
+                                </figure>
+                                <div class="box-summary">
+                                    <h4><a href="#">Revolutionizing usability with dual touch screen phones </a></h4>
+                                </div><!--/.box-summary-->
+                            </div><!--/.col-container-->
+                        </div><!--/.item-->
+                        <div class="item">
+                            <div class="col-container">
+                                <figure>
+                                    <a href="#"><img src="images/imagineering-thumb-01.jpg" alt=""></a>
+                                </figure>
+                                <div class="box-summary">
+                                    <h4><a href="#">Smarter living with connected thermostats</a></h4>
+                                </div><!--/.box-summary-->
+                            </div><!--/.col-container-->
+                        </div><!--/.item-->
+                        <div class="item">
+                            <div class="col-container">
+                                <figure>
+                                    <a href="#"><img src="images/imagineering-thumb-02.jpg" alt=""></a>
+                                </figure>
+                                <div class="box-summary">
+                                    <h4><a href="#">Sustainability in healthcare with reusable staplers</a></h4>
+                                </div><!--/.box-summary-->
+                            </div><!--/.col-container-->
+                        </div><!--/.item-->
+                        <div class="item">
+                            <div class="col-container">
+                                <figure>
+                                    <a href="#"><img src="images/imagineering-thumb-03.jpg" alt=""></a>
+                                </figure>
+                                <div class="box-summary">
+                                    <h4><a href="#">Revolutionizing usability with dual touch screen phones </a></h4>
+                                </div><!--/.box-summary-->
+                            </div><!--/.col-container-->
+                        </div><!--/.item-->
                     </div><!--/.row-->
-                </div>
-                </div>
-            </div><!--/.container-->
-        </div><!--/.section-->
-        <div class="section imagineering-section">
-        	<div class="container">
-            	<h3>Our commitment to Imagineering</h3>
-            	<div class="carousel-section">
-                	<div class="item">
-                    	<div class="col-container">
-                        	<figure>
-                            	<a href="#"><img src="images/imagineering-thumb-01.jpg" alt=""></a>
-                            </figure>
-                            <div class="box-summary">
-                            	<h4><a href="#">Smarter living with connected thermostats</a></h4>
-                            </div><!--/.box-summary-->
-                        </div><!--/.col-container-->
-                    </div><!--/.item-->
-                	<div class="item">
-                    	<div class="col-container">
-                        	<figure>
-                            	<a href="#"><img src="images/imagineering-thumb-02.jpg" alt=""></a>
-                            </figure>
-                            <div class="box-summary">
-                            	<h4><a href="#">Sustainability in healthcare with reusable staplers</a></h4>
-                            </div><!--/.box-summary-->
-                        </div><!--/.col-container-->
-                    </div><!--/.item-->
-                	<div class="item">
-                    	<div class="col-container">
-                        	<figure>
-                            	<a href="#"><img src="images/imagineering-thumb-03.jpg" alt=""></a>
-                            </figure>
-                            <div class="box-summary">
-                            	<h4><a href="#">Revolutionizing usability with dual touch screen phones </a></h4>
-                            </div><!--/.box-summary-->
-                        </div><!--/.col-container-->
-                    </div><!--/.item-->
-                	<div class="item">
-                    	<div class="col-container">
-                        	<figure>
-                            	<a href="#"><img src="images/imagineering-thumb-01.jpg" alt=""></a>
-                            </figure>
-                            <div class="box-summary">
-                            	<h4><a href="#">Smarter living with connected thermostats</a></h4>
-                            </div><!--/.box-summary-->
-                        </div><!--/.col-container-->
-                    </div><!--/.item-->
-                	<div class="item">
-                    	<div class="col-container">
-                        	<figure>
-                            	<a href="#"><img src="images/imagineering-thumb-02.jpg" alt=""></a>
-                            </figure>
-                            <div class="box-summary">
-                            	<h4><a href="#">Sustainability in healthcare with reusable staplers</a></h4>
-                            </div><!--/.box-summary-->
-                        </div><!--/.col-container-->
-                    </div><!--/.item-->
-                	<div class="item">
-                    	<div class="col-container">
-                        	<figure>
-                            	<a href="#"><img src="images/imagineering-thumb-03.jpg" alt=""></a>
-                            </figure>
-                            <div class="box-summary">
-                            	<h4><a href="#">Revolutionizing usability with dual touch screen phones </a></h4>
-                            </div><!--/.box-summary-->
-                        </div><!--/.col-container-->
-                    </div><!--/.item-->
-                </div><!--/.row-->
-            </div><!--/.container-->
-        </div><!--/.section-->
-        <div class="section objective-section">
-        	<span class="strip"><span class="strip-01">&nbsp;</span></span>
-        	<div class="container">
-            	<h3>The objective – every single day</h3>
-            </div>
-        </div><!--/.objective-section-->
-        <div class="section communication-section">
-        	<div class="container">
-            	<h3>What does our communication need to be like?</h3>
-                <div class="row">
-                	<div class="col-sm-4 compelling-col">
-                    	<div class="col-container">
-                        	<span class="icon">Icon</span>
-                        	<div class="col-summary">
+                </div><!--/.container-->
+            </div><!--/.section-->
+        </div><!--/.section-container-->
+        
+        
+        <div class="section-container" id="objective-section">
+            <div class="section">
+                <span class="strip"><span class="strip-01">&nbsp;</span><span class="strip-02">&nbsp;</span></span>
+                <div class="container">
+                    <h3>The objective – every single day</h3>
+                    <div class="object-chart">
+                    	<div class="top-objects">
+                        	<div class="left-circle">
                             	<div class="box-table">
                                 	<div class="box-info">
-                                    	<h4>Compelling story telling</h4>
-                                    </div><!--/.box-info-->
-                                </div><!--/.box-table-->
-                            </div>
-                        </div><!--/.col-container-->
-                    </div><!--/.col-sm-4-->
-                	<div class="col-sm-4 evoke-col">
-                    	<div class="col-container">
-                        	<span class="icon">Icon</span>
-                        	<div class="col-summary">
+                                		<h4>What We Are<span>An Unfold Story</span></h4>    
+                                    </div>
+                                </div>
+                            </div><!--/.left-circle-->
+                        	<div class="right-circle">
                             	<div class="box-table">
                                 	<div class="box-info">
-                                		<h4>Evokes curiosity</h4>    
+                                		<h4>What We <br>Will Be<span>An Featured Story</span></h4>    
                                     </div>
                                 </div>
                             </div>
-                        </div><!--/.col-container-->
-                    </div><!--/.col-sm-4-->
-                	<div class="col-sm-4 contextual-col">
-                    	<div class="col-container">
-                        	<span class="icon">Icon</span>
-                        	<div class="col-summary">
-                            	<div class="box-table">
-                                	<div class="box-info">
-                                		<h4>Outside in & Contextual</h4>    
-                                    </div><!--/.box-info-->
-                                </div><!--/.box-table-->
-                            </div><!--/.col-summary-->
-                        </div><!--/.col-container-->
-                    </div><!--/.col-sm-4-->
-                	<div class="col-sm-4 conversational-col">
-                    	<div class="col-container">
-                        	<span class="icon">Icon</span>
-                        	<div class="col-summary">
-                            	<div class="box-table">
-                                	<div class="box-info">
-                                    	<h4>Conversational</h4>
-                                    </div><!--/.box-info-->
-                                </div><!--/.box-table-->
-                            </div>
-                        </div><!--/.col-container-->
-                    </div><!--/.col-sm-4-->
-                	<div class="col-sm-4 clear-icon">
-                    	<div class="col-container">
-                        	<span class="icon">Icon</span>
-                        	<div class="col-summary">
-                            	<div class="box-table">
-                                	<div class="box-info">
-                                    	<h4>Clear and easy to comprehend</h4>
-                                    </div><!--/.box-info-->
-                                </div><!--/.box-table-->
-                            </div>
-                        </div><!--/.col-container-->
-                    </div><!--/.col-sm-4-->
-                	<div class="col-sm-4 adaptable-col">
-                    	<div class="col-container">
-                        	<span class="icon">Icon</span>
-                        	<div class="col-summary">
-                            	<div class="box-table">
-                                	<div class="box-info">
-                                    	<h4>Adaptable & <span>responsive design</span></h4>
-                                    </div><!--/.box-info-->
-                                </div><!--/.box-table-->
-                            </div>
-                        </div><!--/.col-container-->
-                    </div><!--/.col-sm-4-->
-                	
-                	
+                        	<span class="object-tagline">The challenge</span>
+                            <span class="triangle-strip">&nbsp;</span>
+                           
+                        </div>
+                         <span class="triangle-shape">&nbsp;</span>
+                    </div>
+                    <a href="#" class="readmore dark">More</a>
                 </div>
-                <a href="#" class="readmore">More</a>
-            </div><!--/.container-->
-        </div><!--/.section-->
-    	<div class="section stackholder-section">
-        	<span class="strip"><span class="strip-01">&nbsp;</span></span>
-        	<div class="container">
-            	<h3>Resonate, 3600&deg; across stakeholders</h3>
-                <figure>
-                	<img src="images/charts.png" alt="">
-                </figure>
+            </div><!--/.section-->
+        </div><!--/.section-container-->
+        
+        <div class="section-container" id="communication-section">
+            <div class="section">
+                <div class="container">
+                    <h3>What does our communication need to be like?</h3>
+                    <div class="row">
+                        <div class="col-sm-4 compelling-col">
+                            <div class="col-container">
+                                <span class="icon">Icon</span>
+                                <div class="col-summary">
+                                    <div class="box-table">
+                                        <div class="box-info">
+                                            <h4>Compelling story telling</h4>
+                                        </div><!--/.box-info-->
+                                    </div><!--/.box-table-->
+                                </div>
+                            </div><!--/.col-container-->
+                        </div><!--/.col-sm-4-->
+                        <div class="col-sm-4 evoke-col">
+                            <div class="col-container">
+                                <span class="icon">Icon</span>
+                                <div class="col-summary">
+                                    <div class="box-table">
+                                        <div class="box-info">
+                                            <h4>Evokes curiosity</h4>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--/.col-container-->
+                        </div><!--/.col-sm-4-->
+                        <div class="col-sm-4 contextual-col">
+                            <div class="col-container">
+                                <span class="icon">Icon</span>
+                                <div class="col-summary">
+                                    <div class="box-table">
+                                        <div class="box-info">
+                                            <h4>Outside in & Contextual</h4>    
+                                        </div><!--/.box-info-->
+                                    </div><!--/.box-table-->
+                                </div><!--/.col-summary-->
+                            </div><!--/.col-container-->
+                        </div><!--/.col-sm-4-->
+                        <div class="col-sm-4 conversational-col">
+                            <div class="col-container">
+                                <span class="icon">Icon</span>
+                                <div class="col-summary">
+                                    <div class="box-table">
+                                        <div class="box-info">
+                                            <h4>Conversational</h4>
+                                        </div><!--/.box-info-->
+                                    </div><!--/.box-table-->
+                                </div>
+                            </div><!--/.col-container-->
+                        </div><!--/.col-sm-4-->
+                        <div class="col-sm-4 clear-icon">
+                            <div class="col-container">
+                                <span class="icon">Icon</span>
+                                <div class="col-summary">
+                                    <div class="box-table">
+                                        <div class="box-info">
+                                            <h4>Clear and easy to comprehend</h4>
+                                        </div><!--/.box-info-->
+                                    </div><!--/.box-table-->
+                                </div>
+                            </div><!--/.col-container-->
+                        </div><!--/.col-sm-4-->
+                        <div class="col-sm-4 adaptable-col">
+                            <div class="col-container">
+                                <span class="icon">Icon</span>
+                                <div class="col-summary">
+                                    <div class="box-table">
+                                        <div class="box-info">
+                                            <h4>Adaptable & <span>responsive design</span></h4>
+                                        </div><!--/.box-info-->
+                                    </div><!--/.box-table-->
+                                </div>
+                            </div><!--/.col-container-->
+                        </div><!--/.col-sm-4-->
+                        
+                        
+                    </div>
+                    <a href="#" class="readmore">More</a>
+                </div><!--/.container-->
+            </div><!--/.section-->
+        </div>
+        
+        <div class="section-container" id="stackholder-section">
+            <div class="section">
+                <span class="strip"><span class="strip-01">&nbsp;</span></span>
+                <div class="container">
+                    <h3>Resonate, 3600&deg; across stakeholders</h3>
+                    <figure>
+                        <img src="images/charts.png" alt="">
+                    </figure>
+                </div>
             </div>
         </div>
-        <div class="section contact-section xs-section">
-        	<div class="container">
-                <h3>Contact Marketing</h3>
-                <svg x="0px" y="0px" width="38px" height="43.5px" viewBox="0 0 38 43.5" enable-background="new 0 0 38 43.5" version="1.1">
-				<g id="Group" fill="none"><!--CHANGE LINE COLOUR-->
-					<path fill-rule="evenodd"  class="path" clip-rule="evenodd" d="M24.6,41.332l12.111-22.29L19.903,1.61L1.155,23.125l2.072,8.471
-l8.233,7.638L24.6,41.332z"/>
-					<path fill-rule="evenodd" class="path" clip-rule="evenodd" d="M24.25,41.125L19.903,1.61l14.185,4.329L24.25,41.125z"/>
-					<path fill-rule="evenodd" class="path" clip-rule="evenodd" d="M34.088,5.939l2.719,13.14L11.475,39.211L1.147,23.17 L34.088,5.939z"/>
-					<path fill-rule="evenodd" class="path" clip-rule="evenodd"  d="M1.755,23.521l22.135,17.443L3.85,31.993L20.511,2.116"/>
-					<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M24.38,32.896h-9.1c-0.934,0-1.689-0.76-1.689-1.696V13.952
-		c0-0.938,0.756-1.696,1.689-1.696h9.1c0.934,0,1.69,0.759,1.69,1.696v14.642v0.081v2.524C26.07,32.136,25.313,32.896,24.38,32.896z
-		 M25.427,13.871c0-0.535-0.434-0.97-0.967-0.97H15.2c-0.533,0-0.966,0.435-0.966,0.97v2.343h11.192V13.871z M25.427,28.978h-1.471
-		c-0.166,0-0.301-0.136-0.301-0.303v-0.081c0-0.167,0.135-0.303,0.301-0.303h1.471V16.86H14.234v11.431h8.435
-		c0.166,0,0.301,0.136,0.301,0.303v0.081c0,0.167-0.135,0.303-0.301,0.303h-8.435v2.302c0,0.536,0.433,0.97,0.966,0.97h9.26
-		c0.533,0,0.967-0.434,0.967-0.97V28.978z M19.83,31.603c-0.556,0-1.007-0.452-1.007-1.01s0.451-1.01,1.007-1.01
-		s1.007,0.452,1.007,1.01S20.386,31.603,19.83,31.603z M19.83,30.229c-0.2,0-0.362,0.163-0.362,0.363
-		c0,0.201,0.162,0.364,0.362,0.364s0.362-0.163,0.362-0.364C20.192,30.393,20.03,30.229,19.83,30.229z M18.542,14.234h2.576
-		c0.178,0,0.322,0.145,0.322,0.323s-0.145,0.323-0.322,0.323h-2.576c-0.178,0-0.322-0.145-0.322-0.323S18.364,14.234,18.542,14.234z
-		"/>
-				</g>
-				</svg>
-
-                <h4>Explore the possibilities of tomorrow.</h4>
-            </div><!--/.container-->
-        </div><!--/.section-->
+        
+        <div class="section-container" id="contact-section">
+            <div class="section">
+                <div class="container">
+                    <h3>Contact Marketing</h3>
+                    <svg x="0px" y="0px" width="38px" height="43.5px" viewBox="0 0 38 43.5" enable-background="new 0 0 38 43.5" version="1.1">
+                    <g id="Group" fill="none"><!--CHANGE LINE COLOUR-->
+                        <path fill-rule="evenodd"  class="path" clip-rule="evenodd" d="M24.6,41.332l12.111-22.29L19.903,1.61L1.155,23.125l2.072,8.471
+    l8.233,7.638L24.6,41.332z"/>
+                        <path fill-rule="evenodd" class="path" clip-rule="evenodd" d="M24.25,41.125L19.903,1.61l14.185,4.329L24.25,41.125z"/>
+                        <path fill-rule="evenodd" class="path" clip-rule="evenodd" d="M34.088,5.939l2.719,13.14L11.475,39.211L1.147,23.17 L34.088,5.939z"/>
+                        <path fill-rule="evenodd" class="path" clip-rule="evenodd"  d="M1.755,23.521l22.135,17.443L3.85,31.993L20.511,2.116"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M24.38,32.896h-9.1c-0.934,0-1.689-0.76-1.689-1.696V13.952
+            c0-0.938,0.756-1.696,1.689-1.696h9.1c0.934,0,1.69,0.759,1.69,1.696v14.642v0.081v2.524C26.07,32.136,25.313,32.896,24.38,32.896z
+             M25.427,13.871c0-0.535-0.434-0.97-0.967-0.97H15.2c-0.533,0-0.966,0.435-0.966,0.97v2.343h11.192V13.871z M25.427,28.978h-1.471
+            c-0.166,0-0.301-0.136-0.301-0.303v-0.081c0-0.167,0.135-0.303,0.301-0.303h1.471V16.86H14.234v11.431h8.435
+            c0.166,0,0.301,0.136,0.301,0.303v0.081c0,0.167-0.135,0.303-0.301,0.303h-8.435v2.302c0,0.536,0.433,0.97,0.966,0.97h9.26
+            c0.533,0,0.967-0.434,0.967-0.97V28.978z M19.83,31.603c-0.556,0-1.007-0.452-1.007-1.01s0.451-1.01,1.007-1.01
+            s1.007,0.452,1.007,1.01S20.386,31.603,19.83,31.603z M19.83,30.229c-0.2,0-0.362,0.163-0.362,0.363
+            c0,0.201,0.162,0.364,0.362,0.364s0.362-0.163,0.362-0.364C20.192,30.393,20.03,30.229,19.83,30.229z M18.542,14.234h2.576
+            c0.178,0,0.322,0.145,0.322,0.323s-0.145,0.323-0.322,0.323h-2.576c-0.178,0-0.322-0.145-0.322-0.323S18.364,14.234,18.542,14.234z
+            "/>
+                    </g>
+                    </svg>
+    
+                    <h4>Explore the possibilities of tomorrow.</h4>
+                </div><!--/.container-->
+            </div><!--/.section-->
+        </div>
     </div><!--/#main-->
     <footer id="footer">
         <div class="container">
             <div class="row">
-            	<div class="col-sm-6">
-                	<a href="#">Sitemap</a>
-                </div><!--/.col-sm-6-->
-                <div class="col-sm-6 text-right">
+                <div class="col-sm-12 text-center">
                 	<p>Larsen & Toubro Limited. All Rights Reserved</p>
                 </div>
             </div>
@@ -373,6 +486,8 @@ l8.233,7.638L24.6,41.332z"/>
 <script src="js/vendor/bootstrap.min.js"></script> 
 <script src="js/vendor/jquery.matchHeight-min.js"></script> 
 <script src="js/vendor/slick.min.js"></script>
+<script src="js/vendor/jquery.nav.min.js"></script>
+<script src="js/vendor/venobox.js"></script>
 <script src="js/general.js"></script>
 </body>
 </html>

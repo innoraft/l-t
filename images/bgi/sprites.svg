@@ -34,10 +34,10 @@
 	<path fill="#FFFFFF" d="M165.641,100h8.094l-40.467,66.771h48.561l-14.162,25.291H110L165.641,100z"/>
 	<path fill="#FFFFFF" d="M189.92,100l-36.42,60.703h8.093L197,100H189.92z"/>
 </g>
-<rect id="_x3C_Slice_x3E_" x="110" y="100" fill="none" width="87" height="92"/>
+<rect id="_x3C_Slice_x3E_" x="113.5" y="100" fill="none" width="87" height="92"/>
 <g>
-	<path fill="#FFFFFF" d="M235.359,192.031h-8.094l40.467-66.771h-48.559l14.16-25.293H291L235.359,192.031z"/>
-	<path fill="#FFFFFF" d="M211.08,192.031l36.42-60.703h-8.092L204,192.031H211.08z"/>
+	<path fill="#FFFFFF" d="M238.859,192.031h-8.094l40.467-66.771h-48.559l14.16-25.293H294.5L238.859,192.031z"/>
+	<path fill="#FFFFFF" d="M214.58,192.031L251,131.328h-8.092L207.5,192.031H214.58z"/>
 </g>
 <rect id="_x3C_Slice_x3E__4_" x="204" y="100" fill="none" width="87" height="92"/>
 <g>
@@ -61,5 +61,39 @@
 		M192.642,250.815l-17,11.999l17,12"/>
 </g>
 <rect id="_x3C_Slice_x3E__7_" x="158" y="237" fill-rule="evenodd" clip-rule="evenodd" fill="none" width="52" height="52"/>
-<rect id="_x3C_Slice_x3E__8_" x="-124" y="-57" fill-rule="evenodd" clip-rule="evenodd" fill="none" width="1067" height="995"/>
+<g>
+	<path fill="#ADAEB1" d="M369.641,99h8.094l-40.467,66.771h48.561l-14.162,25.291H314L369.641,99z"/>
+	<path fill="#ADAEB1" d="M393.92,99l-36.42,60.703h8.093L401,99H393.92z"/>
+</g>
+<g>
+	<path fill="#ADAEB1" d="M443.359,191.064h-8.094l40.467-66.771h-48.559L441.334,99H499L443.359,191.064z"/>
+	<path fill="#ADAEB1" d="M419.08,191.064l36.42-60.703h-8.092L412,191.064H419.08z"/>
+</g>
+<rect id="_x3C_Slice_x3E__8_" x="314" y="99" fill="none" width="88" height="92"/>
+<rect id="_x3C_Slice_x3E__9_" x="411" y="99" fill="none" width="88" height="92"/>
+<rect x="226.75" y="249.407" display="none" fill-rule="evenodd" clip-rule="evenodd" fill="#1C2E49" width="45" height="45"/>
+<rect x="277.625" y="249.453" display="none" fill-rule="evenodd" clip-rule="evenodd" fill="#1C2E49" width="45" height="45"/>
+<g>
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="
+		M238.749,263.907l11.003,16l9.998-16"/>
+</g>
+<g>
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#6E6E6E" stroke-width="2" stroke-miterlimit="10" d="
+		M289.624,263.953l11.003,16l9.998-16"/>
+</g>
+<rect x="225.75" y="305.407" display="none" fill-rule="evenodd" clip-rule="evenodd" fill="#1C2E49" width="45" height="45"/>
+<g>
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#4686C6" stroke-width="2" stroke-miterlimit="10" d="
+		M237.749,319.907l11.003,16l9.998-16"/>
+</g>
+<rect id="_x3C_Slice_x3E__10_" x="226" y="249" fill-rule="evenodd" clip-rule="evenodd" fill="none" width="45" height="46"/>
+<rect id="_x3C_Slice_x3E__11_" x="226" y="305" fill-rule="evenodd" clip-rule="evenodd" fill="none" width="45" height="46"/>
+<rect x="277.625" y="305.453" display="none" fill-rule="evenodd" clip-rule="evenodd" fill="#1C2E49" width="45" height="45"/>
+<g>
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFD153" stroke-width="2" stroke-miterlimit="10" d="
+		M289.624,319.953l11.003,16l9.998-16"/>
+</g>
+<rect id="_x3C_Slice_x3E__12_" x="277" y="305" fill-rule="evenodd" clip-rule="evenodd" fill="none" width="45" height="46"/>
+<rect id="_x3C_Slice_x3E__13_" x="277" y="249" fill-rule="evenodd" clip-rule="evenodd" fill="none" width="45" height="46"/>
+<rect id="_x3C_Slice_x3E__14_" x="-60" y="-57" fill-rule="evenodd" clip-rule="evenodd" fill="none" width="934" height="932"/>
 </svg>

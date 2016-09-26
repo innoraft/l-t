@@ -1,0 +1,138 @@
+@media only screen and (max-width:1200px){
+	.container { width:auto; padding:0 $padding-small-horizontal*2; }
+	
+	body {
+		font-size:$font-size-sm;
+	}
+
+	.navbar { 
+		background:$blue-dark; @include box-shadow(3px 6px 10px rgba(32, 32, 34, 0.25));
+		ul { 
+			li { 
+				padding:0 $padding-small-horizontal+2; 
+			}
+		}
+	}
+	.section {
+		.section-box { padding:$padding-small-horizontal*4 0; }
+		h3 { font-size:30px; }	
+	}
+	#journey-section {
+		.section {
+			.container {
+				h3 { margin:0 0 40px; }	
+				blockquote { 
+					font-size:$font-size-base; 
+					padding:0 30px;
+					&:before, &:after { @include transform(scale(0.65)); }
+				} 
+				.right-container {
+					p:first-child	{ font-size:$font-size-base; }
+				}
+			}
+		}
+	}
+	
+	#imagineering-section {
+		display:none;
+		.section { padding:30px 0; }	
+	}
+	#communication-section {
+		.section {
+			padding:40px 0;
+			.col-container {
+				h4 { font-size:20px; }	
+			}
+		}
+	}
+	#objective-section {
+		.section { 
+			padding:30px 0; 
+			.object-chart { 
+				margin:30px auto; 
+				width:90%;
+				.object-tagline { width:44%; }
+			}
+		}
+	}
+	
+	#ceo-blog {
+		height:498px;
+		.item { height:498px; }
+		.item-01, .item-02 { background-size:50% auto; -webkit-background-size:50% auto; -ms-background-size:50% auto; -moz-background-size:50% auto; background-position:100% 100%; }
+		.container { 
+			width:100%; 
+			.box-info-content {
+				 h4, h5, h6 { font-size:$font-size-sm; }	
+			}
+		}
+	}
+	
+	#employer-section {
+		p { margin:15px 0 0; }	
+	}
+	
+}
+
+@media only screen and (max-width:1000px){
+	.section {
+		h3 { font-size:26px; }	
+	}
+	#mainbanner {
+		.box-table { 
+			width:90%; 
+			.box-info > a { font-size:22px; }
+		}	
+		h3 {
+			font-size:28px;
+			padding:0 50px;
+			&:before, &:after { @include transform(scale(0.65)); }	
+		}
+	}
+	#journey-section {
+		.section {
+			.container {
+				blockquote { 
+					&:before { left:0; }
+					&:after { right:0; }
+				} 
+				.right-container {
+					.col-container { padding-left:20px; }
+					p { 
+						margin:15px 0 0; line-height:1.25; 
+						&:first-child { font-size:18px; }
+					}	
+				}
+			}
+		}
+	}
+	#video-section {
+		&:before { width:55%; }
+		.strip { width:55%; }
+		.container {
+			.left-container {
+				.col-container { padding-left:0; }	
+			}
+		}
+	}
+	
+	#who-we-are-section {
+		 .section  {
+			.strip { width:45%; }
+			.col-container { padding-left:0; }	 
+			p { margin:15px 0 0; }
+		 }
+	}
+	#communication-section {
+		.section {
+			.col-sm-4 { width:50%; float:left; }	
+		}
+	}
+	#mission-section {
+		.section {
+			.strip { width:52%; }
+			h3 { padding-left:0; }
+			.col-container { padding-left:0; }	
+		}
+	}
+}

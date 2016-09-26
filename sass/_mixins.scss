@@ -1,0 +1,43 @@
+@mixin sprites($width,$height,$x,$y) {
+  width: $width+px;
+  height:$height+px;
+  background:url($path);
+  background-repeat:no-repeat;
+  background-position:$x+px $y+px;
+}
+
+@mixin text-uppercase() {
+	text-transform:uppercase;
+}
+
+@mixin text-center() {
+	text-align:center;
+}
+
+@mixin no-padding() {
+	padding:0;
+}
+
+.img-responive {
+	width:100%; height:auto; 	
+}
+
+//== Functions
+
+$path: "../images/bgi/sprites.svg";
+
+%no-style{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+
+%background-full{
+	background-position:50% 50%; 
+	background-repeat:no-repeat; 
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-ms-background-size:cover;
+}

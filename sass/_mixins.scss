@@ -14,11 +14,19 @@
 	text-align:center;
 }
 
+@mixin text-left() {
+	text-align:left;
+}
+
 @mixin no-padding() {
 	padding:0;
 }
 
-.img-responive {
+@mixin no-margin() {
+	margin:0;
+}
+
+@mixin img-responive() {
 	width:100%; height:auto; 	
 }
 
@@ -33,7 +41,7 @@ $path: "../images/bgi/sprites.svg";
 }
 
 
-%background-full{
+@mixin background-full() {
 	background-position:50% 50%; 
 	background-repeat:no-repeat; 
 	background-size:cover;

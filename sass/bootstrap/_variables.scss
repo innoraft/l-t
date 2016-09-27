@@ -71,7 +71,7 @@ $font-family-regular:	'ProximaRegular',Arial, Helvetica, sans-serif;
 
 $font-size-base: 25px !default;
 
-$font-size-large:ceil(($font-size-base * 1.11)) !default; // ~20px
+$font-size-large: ceil(($font-size-base * 0.8)) !default; // ~20px
 $font-size-small: ceil(($font-size-base * 0.64)) !default; // ~16px
 $font-size-xs-small: ceil(($font-size-base * 0.7)) !default; // ~14px
 $font-size-lm: ceil(($font-size-base * 1.28)) !default; // ~32px

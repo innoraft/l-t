@@ -48,29 +48,36 @@
 		/* Menu ICon Append prepend for responsive
 		---------------------------------------------------------------------*/
 		$(window).on('resize', function(){
-			if (screencheck(767)) {
+			if (screencheck(1023)) {
+				if(!$('#menu').length){
+					$('.navbar .container').prepend('<a href="#" id="menu" class="menulines-button"><span class="menulines"></span><em>Menu</em></a>');
+				}			
+			} else {
+				$('#menu').remove();		
 			}
-			$borderHeight = parseInt($winW()/4);
-			if($('.strip-01').length){
-				$('.strip-01').css('border-bottom-width',$winW()-$borderHeight-68);
-				$('.strip-01').css('border-left-width', $borderHeight);
+			if(!screencheck(767)){
+				$borderHeight = parseInt($winW()/4);
+				if($('.strip-01').length){
+					$('.strip-01').css('border-bottom-width',$winW()-$borderHeight-68);
+					$('.strip-01').css('border-left-width', $borderHeight);
+				}
+
+				if($('.strip-03').length){
+					$('.strip-03').css('border-bottom-width',$winW()*2-$borderHeight);
+					$('.strip-03').css('border-left-width', $winW()/2+170);
+				}
+				
+				$('.strip-line').css('height',$winW());
+				$stripWidth = $('.video-section .strip-01').width();
+				
+				var $containerWidth = $('.container').width();
+				var $totalWidth = parseInt($winW()-$containerWidth);
+				$('.strip-space').css('width',$totalWidth/2);
+				
 			}
-			
-			if($('.strip-03').length){
-				$('.strip-03').css('border-bottom-width',$winW()*2-$borderHeight);
-				$('.strip-03').css('border-left-width', $winW()/2+170);
-			}
-			
-			$('.strip-line').css('height',$winW());
-			$stripWidth = $('.video-section .strip-01').width();
-			
-			var $containerWidth = $('.container').width();
-			var $totalWidth = parseInt($winW()-$containerWidth);
-			$('.strip-space').css('width',$totalWidth/2);
-			
-			
-			/*$('.muti-section-container > .strip').css('width',$borderHeight+72)*/
+
 		}).resize();
+		
 
 
 		/* This adds placeholder support to browsers that wouldn't otherwise support it.
@@ -92,6 +99,20 @@
 				$(':text.hasPlaceholder').val('');
 			});
 		}
+		
+		$(document).on('click',"#menu", function(){
+			$this = $(this);
+			$(this).toggleClass('menuopen');
+			$('.navbar > .container > ul').slideToggle();
+			return false;
+		});
+		
+		$('.navbar > .container > ul > li > a').click(function(){
+			if(screencheck(1023)){
+				$('.navbar > .container > ul').slideUp();
+				$('#menu').removeClass('menuopen');
+			}
+		});
 		
 		/* MatchHeight Js
 		-------------------------------------------------------------------------*/
@@ -118,7 +139,20 @@
 			  dots:true,
 			  arrows:false,
 			  fade: true,
-			  autoplaySpeed: 2000
+			  adaptiveHeight: false,
+			  autoplaySpeed: 2000,
+			  responsive: [
+				{
+				  breakpoint: 640,
+				  settings: {
+					slidesToShow:1,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true,
+					adaptiveHeight: true
+				  }
+				}
+			  ]
 			});
 		}
 
@@ -182,5 +216,17 @@
 			});
 		}
 	});
+	
+	wow = new WOW(
+	{
+		animateClass: 'animated',
+		offset:       30,
+		callback:     function(box) {
+			//console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+		}
+		}
+	);
+	wow.init();
+
 
 })(jQuery, window, document);

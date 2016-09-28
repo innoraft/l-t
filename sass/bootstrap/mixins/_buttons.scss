@@ -8,16 +8,16 @@
   background-color: $background;
   border-color: $border;
 
-  &:focus,
+ /* &:focus,
   &.focus {
     color: $color;
     background-color: darken($background, 10%);
         border-color: darken($border, 25%);
-  }
+  }*/
   &:hover {
     color: $color;
-    background-color: darken($background, 10%);
-        border-color: darken($border, 12%);
+    background-color:$background;
+        border-color:$border;
   }
   &:active,
   &.active,
@@ -30,8 +30,8 @@
     &:focus,
     &.focus {
       color: $color;
-      background-color: darken($background, 17%);
-          border-color: darken($border, 25%);
+      background-color:$background, 17%;
+          border-color:$border, 25%;
     }
   }
   &:active,

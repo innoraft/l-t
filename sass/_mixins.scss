@@ -49,3 +49,20 @@ $path: "../images/bgi/sprites.svg";
 	-moz-background-size:cover;
 	-ms-background-size:cover;
 }
+
+// Transitions
+@mixin transitions($transition-property)  {
+	-moz-transition:$transition-property 550ms cubic-bezier(0.450, 1.000, 0.320, 1.000); 
+	-webkit-transition:$transition-property 550ms cubic-bezier(0.450, 1.000, 0.320, 1.000); 
+	-o-transition:$transition-property 550ms cubic-bezier(0.450, 1.000, 0.320, 1.000); 
+	-ms-transition:$transition-property 550ms cubic-bezier(0.450, 1.000, 0.320, 1.000); 
+	transition:$transition-property 550ms cubic-bezier(0.450, 1.000, 0.320, 1.000);
+}
+
+@mixin transitions-multi($transition-property1, $transition-property2)  {
+	-moz-transition:$transition-property1 550ms cubic-bezier(0.450, 1.000, 0.320, 1.000), $transition-property2 550ms cubic-bezier(0.450, 1.000, 0.320, 1.000) ; 
+	-webkit-transition:$transition-property1 550ms cubic-bezier(0.450, 1.000, 0.320, 1.000), $transition-property2 550ms cubic-bezier(0.450, 1.000, 0.320, 1.000); 
+	-o-transition:$transition-property1 550ms cubic-bezier(0.450, 1.000, 0.320, 1.000), $transition-property2 550ms cubic-bezier(0.450, 1.000, 0.320, 1.000); 
+	-ms-transition:$transition-property1 550ms cubic-bezier(0.450, 1.000, 0.320, 1.000), $transition-property2 550ms cubic-bezier(0.450, 1.000, 0.320, 1.000); 
+	transition:$transition-property1 550ms cubic-bezier(0.450, 1.000, 0.320, 1.000), $transition-property2 550ms cubic-bezier(0.450, 1.000, 0.320, 1.000);
+}

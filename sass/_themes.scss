@@ -1,5 +1,4 @@
-/* =Import Required styles
-========================================================================================*/
+// ---------------------------------Import Fonts-----------------------------------
 @font-face {
     font-family: 'ProximaLight';
     src: url('../fonts/proximanova-light-webfont.eot');
@@ -35,9 +34,6 @@
 }
 
 
-
-/* =Box Sizing 
-========================================================================================*/
 body { 
 	font-family:$font-family-base; 
 	font-size:$font-size-base; 
@@ -61,8 +57,7 @@ a {
 	outline:none !important ; 
 }
 
-/* =Form Style
-========================================================================================*/
+// ---------------------------------Form Style-----------------------------------
 button, input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="search"], input[type="url"], textarea, select, input[type="submit"], input[type="button"] { 
 	font-size:100%; 
 	margin:0; 
@@ -224,7 +219,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .navbar { 
-	background:$blue-dark; 
+	background:$link-color; 
 	@include box-shadow(3px 6px 10px rgba(32, 32, 34, 0.25));
 	ul { 
 		@extend %no-style; 
@@ -285,7 +280,7 @@ input[type="checkbox"], input[type="radio"] {
 	h3 { 
 		font-size:38px; 
 		@include text-shadow(0px 3px 10px rgba(32, 32, 34, 0.25)); 
-		text-transform:uppercase; 
+		@include text-uppercase();
 		padding:0 $padding-small-horizontal*9; 
 		margin:0 0 $padding-large-vertical*2; 
 		position:relative;
@@ -298,15 +293,15 @@ input[type="checkbox"], input[type="radio"] {
 			content:""; 
 			position:absolute; 
 			left:0; 
-			top:0; 
-			@include sprites(87,92,-110,-100); 
 			top:(-$padding-large-vertical*5); 
+			@include sprites(92,92,-114,-99); 
+			
 		}
 		&:after { 
 			content:""; 
 			position:absolute; 
 			right:0; 
-			@include sprites(87,92,-207,-100); 
+			@include sprites(92,92,-234,-99); 
 			bottom:(-$padding-large-vertical*5); 
 		}
 	}
@@ -378,6 +373,7 @@ input[type="checkbox"], input[type="radio"] {
 	}
 }
 
+// ---------------------------------Buttons-----------------------------------
 .readmore {
 	font-size:$font-size-base; 
 	margin:0 auto; 
@@ -438,7 +434,7 @@ input[type="checkbox"], input[type="radio"] {
 	@include  transitions(background);
 	
 	&:hover, &:focus { 
-		background:$blue-dark; 
+		background:$link-color; 
 		color:$white; 
 		border-color:$blue-dark; 
 	} 
@@ -832,6 +828,9 @@ input[type="checkbox"], input[type="radio"] {
 #imagineering-section {
 	.section {
 		padding:$padding-small-horizontal*10 0;
+		@include box-shadow(-3px -6px 10px rgba(32, 32, 34, 0.25));
+		position:relative;
+		z-index:10;
 		background-image:url(../images/imagineering-section.jpg);
 		@include background-full();
 		color:$white;
@@ -875,6 +874,7 @@ input[type="checkbox"], input[type="radio"] {
 #communication-section {
 	.section {
 		background-image:url(../images/communication-bg.jpg);
+		@include box-shadow(-3px -6px 10px rgba(32, 32, 34, 0.25));
 		@include background-full();
 		color:$white;
 		padding:$padding-small-horizontal*8+6 0;
@@ -1008,7 +1008,7 @@ input[type="checkbox"], input[type="radio"] {
 			position:absolute; 
 			left:0; 
 			top:-68px; 
-			@include sprites(88,92,-314,-99); 
+			@include sprites(92,92,-344,-99); 
 		}
 		h4 { 
 			font-size:$font-size-base; 
@@ -1020,7 +1020,7 @@ input[type="checkbox"], input[type="radio"] {
 				position:absolute; 
 				right:0; 
 				bottom:-68px; 
-				@include sprites(88,92,-411,-99); 
+				@include sprites(92,92,-474,-99); 
 			}
 		}
 		h5 { 
@@ -1326,11 +1326,230 @@ input[type="checkbox"], input[type="radio"] {
 	}
 }
 
+// ---------------------------------Innerpage-----------------------------------
+#innerbanner {
+	position:relative;
+	img { @include img-responsive(); }
+	.banner-container {
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;	
+	}
+	.container {
+		height:100%;
+		@include text-center();	
+	}
+	h1 {
+		font-size:84px;
+		font-family:$font-family-bold;
+		@include text-uppercase();
+		color:$white;
+		@include text-shadow(0px 3px 10px rgba(32, 32, 34, 0.25));
+		@include no-margin();
+		position:relative;
+		display:inline-block;
+		padding:0 $padding-small-horizontal*9+5;
+		&:before { 
+			content:""; 
+			position:absolute; 
+			left:0; 
+			@include sprites(92,92,-114,-99); 
+			@include scale(0.88);
+			@include transform-origin(left top);
+			top:(-$padding-small-horizontal*3); 
+		}
+		&:after { 
+			content:""; 
+			position:absolute; 
+			right:0; 
+			@include sprites(92,92,-234,-99); 
+			bottom:(-$padding-small-horizontal*3);
+			@include scale(0.88);
+			@include transform-origin(right top);
+		}
 
+	}
+}
+
+.main-conatiner {
+	color:$black-light;
+	margin:$padding-small-horizontal*3 0;
+	padding:$padding-small-horizontal*4+2 $padding-small-horizontal*2+6;
+	border:1px solid $brand-default;
+	> h3 { 
+		font-size:34px;
+		color:$blue-dark;
+		@include text-uppercase();
+	}
+	.details-section {
+		> ul {
+			@extend %no-style;
+			margin:0 0 $padding-small-horizontal*2;
+			li {
+				position:relative;
+				padding-left:$padding-small-horizontal*2+6;
+				margin:0 0 $padding-small-horizontal*2;
+				&:before {
+					content:"";
+					width:12px;
+					height:12px;
+					@include rotate(45deg);
+					position:absolute;
+					left:0;
+					top:$padding-small-horizontal+2;	
+					background:$black-light;
+				}
+			}
+		}
+	}
+}
+
+.help-link { 
+	margin:0 0 $padding-small-horizontal*5+2;
+	display:block;
+	float:right;
+	padding-left:$padding-small-horizontal*6+5;
+	color:$black-light;
+	position:relative;
+	&:before {
+		content:"";
+		@include sprites(49,48,-455,-324);
+		position:absolute;
+		left:0;
+		top:50%;
+		margin-top:-24px;
+		@include transitions(all);	
+	}
+	&:hover {
+		color:$link-color;
+		text-decoration:none;
+		&:before {
+			@include sprites(49,48,-455,-379);
+		}
+	}
+}
+
+.back-link {
+	width:92px;
+	display:block;
+	margin:0 auto;
+	position:relative;
+	color:$text-color;
+	@include text-uppercase();
+	padding-left:$padding-small-horizontal*5+2;
+	&:before {
+		position:absolute;
+		content:"";
+		left:0;
+		top:0;
+		@include sprites(38,38,-332,-252);
+		@include rotate(180deg);
+		border:1px solid $black-light;
+		@include border-radius(50%);
+		@include transitions(all);	
+	}
+	&:hover {
+		text-decoration:none;
+		color:$link-color;	
+		&:before {
+			@include sprites(38,38,-376,-252);
+			border-color:$link-color;
+		}
+	}
+}
+
+
+.share-nav {
+	ul {
+		@extend %no-style;
+		float:right;
+		margin:$padding-small-horizontal*7 0 0;
+		li { 
+			float:left; 
+			a {
+				display:block;
+				text-indent:-999em;
+				margin:0 0 0 $padding-small-horizontal+5;
+				&:hover {
+					@include transitions(all);	
+				}
+			}
+			&.next-link  {
+				a { 
+					@include sprites(38,38,-332,-253);
+					border:1px solid $black-light;	
+					@include border-radius(50%);
+					&:hover {
+						@include sprites(38,38,-376,-253);
+						border:1px solid $link-color;
+					}
+				}
+			}
+			&.share-link {
+				a { 
+					@include sprites(38,38,-332,-309);	
+					&:hover {
+						@include sprites(38,38,-376,-309);
+					}
+				}
+			}
+		}
+	}
+	@include clearfix();
+	
+}
+
+.venue-details {
+	ul {
+		@extend %no-style;
+		margin:0 0 $padding-small-horizontal*2+5;
+		li {
+			padding:$padding-small-horizontal 0 $padding-small-horizontal $padding-small-horizontal*12;
+			border-bottom:1px dashed $brand-default;
+			position:relative;
+			&:first-child {
+				border-top:1px dashed $brand-default;	
+			}
+			span { 
+				position:absolute;
+				left:0;
+				top:8px;
+				width:104px;
+				padding:2px $padding-small-horizontal;
+				background:$gray-lighter;
+			}
+			&:after { 
+				display:inline-block; 
+				vertical-align:middle; 
+				content:""; 
+				margin-left:$padding-small-horizontal*2+6;
+			}
+			&.date { 
+				&:after {
+					@include sprites(38,38,-455,-271);	
+				}
+			}
+			&.time { 
+				&:after {
+					@include sprites(38,38,-505,-271);	
+				}
+			}
+			&.venue { 
+				&:after {
+					@include sprites(38,41,-555,-271);	
+				}
+			}
+		}
+	}
+}
+
+// ---------------------------------For IE-----------------------------------
 
 @media all and (-ms-high-contrast:none)
 {
- .path {  stroke-dashoffset:0;  } /* IE10 */
+ .path {  stroke-dashoffset:0;  } 
 }
 
 .path {  stroke-dashoffset:0\9;  }

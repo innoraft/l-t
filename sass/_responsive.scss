@@ -225,6 +225,45 @@
 			}
 		}	
 	}
+	
+	.share-nav {
+		ul {
+			margin:$padding-small-horizontal*3 0 0;	
+		}
+	}
+	
+	#innerbanner {
+		h1 { 
+			font-size:52px;
+			padding:0 $padding-small-horizontal*5;
+			&:before {
+				@include transform(scale(0.45));
+				@include transform-origin(left top);
+				top:(-$padding-small-horizontal);
+			}
+			&:after {
+				@include transform(scale(0.45));
+				@include transform-origin(right bottom);
+				bottom:(-$padding-small-horizontal);
+			}
+		}
+	}
+	
+	.main-conatiner {
+		padding:$padding-small-horizontal*2+6;
+		> h3 {
+			font-size:$font-size-base;	
+		}
+	}
+	.venue-details {
+		ul {
+			li {
+				span { 
+					top:$padding-small-horizontal+3;
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (max-width:1000px){
@@ -624,6 +663,21 @@
 		}
 	}
 	
+	.help-link { float:left; }
+	
+	.venue-details {
+		ul {
+			li {
+				padding:$padding-small-horizontal 0;
+				span { position:relative; top:0; display:block; margin:0 0 $padding-small-horizontal+5;  }	
+				&:after { 
+					position:absolute; 
+					right:0; 
+					top:$padding-small-horizontal;
+				}
+			}
+		}
+	}	
 }
 
 @media only screen and (max-width:640px){
@@ -752,6 +806,20 @@
 		.slick-dots { 
 			position:relative;
 			bottom:$padding-small-horizontal*2;
+		}
+	}
+	
+	#innerbanner {
+		h1 {
+			font-size:$font-size-h4;
+			&:before {
+				@include transform(scale(0.35));
+				@include transform-origin(left top);
+			}
+			&:after {
+				@include transform(scale(0.35));
+				@include transform-origin(right bottom);
+			}
 		}
 	}
 

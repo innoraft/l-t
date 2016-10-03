@@ -17,7 +17,7 @@
 			}
 		}
 	}
-	.section-container { padding-top:40px; margin-top:-40px; }
+	.section-container { padding-top:$padding-small-horizontal*4; margin-top:(-$padding-small-horizontal*4); }
 	.section {
 		.section-box { padding:$padding-small-horizontal*4 0; }
 		h3 { font-size:$font-size-h4; }	
@@ -249,10 +249,12 @@
 		}
 	}
 	
-	.main-conatiner {
+	.main-container {
 		padding:$padding-small-horizontal*2+6;
-		> h3 {
-			font-size:$font-size-base;	
+		.venue-details { 
+			> h3 {
+				font-size:$font-size-base;	
+			}
 		}
 	}
 	.venue-details {
@@ -349,7 +351,7 @@
 
 @media only screen and (max-width:767px){
 	body { 
-		font-size:$font-size-large;
+		font-size:$font-size-sm;
 	}
 	.strip , .overlay-bg, .strip-space { 
 		display:none; 
@@ -677,7 +679,18 @@
 				}
 			}
 		}
-	}	
+	}
+	
+	.main-container-box {
+		margin:0 0 30px;	
+	}
+	
+	.bottom-nav {
+		.help-col {
+			width:auto;	
+		}
+	}
+
 }
 
 @media only screen and (max-width:640px){

@@ -71,6 +71,15 @@ a.btn {
 .btn-primary {
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
+
+.btn-secondary{
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+  &:hover {
+	@include button-variant($white, $text-color, $text-color);  
+  }
+}
+
+
 // Success appears as green
 .btn-success {
   @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);

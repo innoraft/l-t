@@ -1434,6 +1434,15 @@ input[type="checkbox"], input[type="radio"] {
 		}
 	}
 	
+	&.result-container {
+		@include no-padding();
+		
+		ul {
+			@extend %no-style;
+				
+		}
+	}
+	
 	.venue-details {
 		> h3 { 
 			font-size:34px;
@@ -1700,7 +1709,7 @@ input[type="checkbox"], input[type="radio"] {
 			font-size:$font-size-small;
 			padding:4px;
 			width:240px;
-			float:left;
+			float:right;
 		}
 		
 	}
@@ -1735,10 +1744,28 @@ input[type="checkbox"], input[type="radio"] {
 	position:relative;
 	left:25px;
 	width:60%;
+	@include text-right();
 	
 	}
 	.help-col {
 		width:40%;	
+	}
+}
+
+
+.slider-navigation {
+	background:$link-color;
+	.item {
+		@include text-center();	
+		a {
+			display:table-cell;
+			vertical-align:middle;
+			color:$white;
+			font-size:18px;
+			line-height:1.25;
+			display:inline-block;
+			@include text-uppercase();
+		}
 	}
 }
 

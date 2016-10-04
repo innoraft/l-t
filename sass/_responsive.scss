@@ -253,7 +253,7 @@
 		padding:$padding-small-horizontal*2+6;
 		.venue-details { 
 			> h3 {
-				font-size:$font-size-base;	
+				font-size:$font-size-large;	
 			}
 		}
 	}
@@ -347,7 +347,80 @@
 		}
 		&:after { top:-8px; }
 	}
+	
+	.vbox-content { padding-top:56.25%; }
+	.venoframe { 
+		width:100% !important; 
+		position:absolute; 
+		left:0; 
+		top:0; 
+		height:100% !important; 
+	}
+	
+	.search-container {
+		.search-form {
+			float:none;
+			width:auto;
+			@include clearfix();
+			margin:0 0 10px;
+			.btn {
+				width:20%;	
+			}
+			input[type="text"], input[type="search"]{
+				width:77%;	
+			}
+		}
+		.or {
+			display:block;
+			margin:0 0 10px;	
+		}
+		.filter-by {
+			float:none;
+			text-align:center;	
+			width:auto;
+			ul {
+				@include make-row(30px);
+				li {
+					@include make-sm-column(4);
+					@include make-xs-column(4);	
+					@include no-margin();
+				}
+				.btn {
+					display:block;
+					width:100%;	
+				}
+			}
+		}
+	}
+	
+	.bottom-nav {
+		.pagination-col  {
+			left:0;
+			@include text-left();	
+		}
+	}
+	
+	.main-container-box {
+		margin:20px 0;	
+	}
+	.main-container {
+		&.list-container {
+			 .cols {
+				.col {
+					padding:20px;
+					.readmore {
+						margin:20px auto 0;
+						&:before {
+							@include scale(1);
+						}
+					}
+				}
+			 }
+		}
+	}
 }
+
+
 
 @media only screen and (max-width:767px){
 	body { 
@@ -665,8 +738,6 @@
 		}
 	}
 	
-	.help-link { float:left; }
-	
 	.venue-details {
 		ul {
 			li {
@@ -681,13 +752,26 @@
 		}
 	}
 	
-	.main-container-box {
-		margin:0 0 30px;	
+	.bottom-nav {
+		.pagination-col { 
+			width:auto; 
+			@include text-center();
+		}
+		.help-col {
+			width:auto;
+			@include text-center();	
+		}
 	}
 	
-	.bottom-nav {
-		.help-col {
-			width:auto;	
+	.help-link {
+		@include no-padding();
+		display:inline-block;
+		float:none;
+		&:before {
+			position:relative;
+			display:block;	
+			top:0;
+			margin:0 auto 20px;
 		}
 	}
 
@@ -832,6 +916,33 @@
 			&:after {
 				@include transform(scale(0.35));
 				@include transform-origin(right bottom);
+			}
+		}
+	}
+	
+	.search-container {
+		.search-form {
+			.btn {
+				width:100%;
+				float:none;	
+			}
+			input[type="text"], input[type="search"] {
+				width:100%;
+				float:none;	
+				margin:0 0 10px;
+			}
+		}
+		
+		.filter-by {
+			ul {
+				li {
+					@include make-xs-column(12);
+					margin:0 0 10px;
+					
+					&:first-child {
+						margin:0 0 10px;	
+					}
+				}
 			}
 		}
 	}

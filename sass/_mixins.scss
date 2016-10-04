@@ -18,6 +18,11 @@
 	text-align:left;
 }
 
+@mixin text-right() {
+	text-align:right;
+}
+
+
 @mixin no-padding() {
 	padding:0;
 }

@@ -129,6 +129,10 @@
 		}
 		
 		
+		if($('.slider-navigation .item').length){
+			$('.slider-navigation .item').matchHeight();
+		}
+		
 		/* Slickslider
 		---------------------------------------------------------------------*/
 		if($('.slider-section').length){
@@ -153,6 +157,30 @@
 				  }
 				}
 			  ]
+			});
+		}
+		
+		if($('.slider-navigation').length){
+			$('.slider-navigation').slick({
+			  slidesToShow:9,
+			  slidesToScroll: 1,
+			  autoplay: true,
+			  dots:false,
+			  arrows:true,
+			  autoplaySpeed: 2000,
+			  responsive: [
+				{
+				  breakpoint: 640,
+				  settings: {
+					slidesToShow:1,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true,
+					adaptiveHeight: true
+				  }
+				}
+			  ]
+				
 			});
 		}
 

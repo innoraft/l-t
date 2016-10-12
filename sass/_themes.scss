@@ -1088,7 +1088,7 @@ input[type="checkbox"], input[type="radio"] {
 	.item {
 		height:698px;
 		@include background-full();
-		background-size:100% auto; 
+		background-position:100% 0; 
 		img { display:none; }	
 	}
 }

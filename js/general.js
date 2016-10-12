@@ -262,6 +262,11 @@
 			});
 		}
 
+		$('.slider-section .item').each(function(index){ 
+			 $getImageSrc = $(this).find('img').attr('src');
+			 $(this).css('background-image', 'url(' + $getImageSrc + ')');
+		});
+		
 		/* MatchHeight Js
 		-------------------------------------------------------------------------*/
 		if($('.navbar ul').length){

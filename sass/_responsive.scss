@@ -11,9 +11,6 @@
 			@include transform-origin(left center);
 		}
 	}
-}
-
-@media only screen and (max-width:1200px){
 	.container { 
 		width:auto; 
 		padding:0 $padding-small-horizontal*2; 
@@ -76,20 +73,23 @@
 	}
 	
 	#ceo-blog {
-		height:498px;
-		.item { height:498px; }
-		.item-01, .item-02 { 
-			background-size:50% auto; 
-			-webkit-background-size:50% auto; 
-			-ms-background-size:50% auto; 
-			-moz-background-size:50% auto; 
-			background-position:100% 100%; 
-		}
 		.container { 
 			width:100%; 
 			.box-info-content {
 				 h4, h5, h6 { font-size:$font-size-sm; }	
 			}
+		}
+	}
+	
+	.slider-section {
+		height:498px;
+		.item { 
+			height:498px; 
+			background-size:90% auto; 
+			-webkit-background-size:50% auto; 
+			-ms-background-size:50% auto; 
+			-moz-background-size:50% auto; 
+			background-position:100% 100%; 
 		}
 	}
 	
@@ -602,10 +602,6 @@
 	}
 	
 	#ceo-blog {
-		height:398px; 
-		.item { 
-			height:398px;
-		}
 		.box-info-content {
 			width:auto;
 			padding:0 $padding-small-horizontal*4;
@@ -626,6 +622,14 @@
 				
 			}
 		}
+	}
+	
+	.slider-section {
+		height:398px; 
+		.item { 
+			height:398px;
+		}
+	
 	}
 	
 	#employer-section {
@@ -906,12 +910,6 @@
 	}
 
 	#ceo-blog {
-		height:auto;
-		.item { 
-			padding:$padding-small-horizontal*6 0 0; 
-			height:auto; 
-			background:none;
-		}	
 		.box-info {
 			display:block;
 			margin:0 0 $padding-small-horizontal*5;	
@@ -920,6 +918,15 @@
 			position:relative;
 			bottom:$padding-small-horizontal*2;
 		}
+	}
+	
+	.slider-section {
+		height:auto;
+		.item { 
+			padding:$padding-small-horizontal*6 0 0; 
+			height:auto; 
+			background:none;
+		}	
 	}
 	
 	#innerbanner {

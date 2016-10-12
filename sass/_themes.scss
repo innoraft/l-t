@@ -1041,9 +1041,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 #ceo-blog {
-	height:698px;
 	.section { @inlcude no-padding(); }	
-	.item { height:698px; }
 	.container { 
 		height:100%; 
 		display:table; 
@@ -1082,10 +1080,16 @@ input[type="checkbox"], input[type="radio"] {
 		}
 		.btn-primary { margin:$padding-small-horizontal*5 0 0; }
 	}
-	.item-01, .item-02 {  
-		background-image:url(../images/ceo-bg.jpg); 
-		background-position:100% 0; 
-		background-repeat:no-repeat; 
+	
+}
+
+.slider-section {
+	height:698px;
+	.item {
+		height:698px;
+		@include background-full();
+		background-size:100% auto; 
+		img { display:none; }	
 	}
 }
 
